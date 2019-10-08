@@ -10,5 +10,8 @@
   },
   "engines": {
     "node": "8.9.4"
+  },
+  "dependencies": {
+    "pet-finder-api": "^1.0.1"
   }
 }
