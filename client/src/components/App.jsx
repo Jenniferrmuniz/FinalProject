@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import Home from './pages/Home'
-import Countries from './pages/Countries'
-import AddCountry from './pages/AddCountry'
 import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -12,12 +10,6 @@ import Quiz from './pages/Quiz'
 import Matches from './pages/Matches'
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      countries: [],
-    }
-  }
 
   state = {
     match: {
@@ -51,8 +43,6 @@ export default class App extends Component {
           <NavLink to="/" exact>
             Home
           </NavLink>
-          {/* <NavLink to="/countries">Countries</NavLink>
-          <NavLink to="/add-country">Add country</NavLink> */}
           <NavLink to="/all-dogs">All dogs</NavLink>
           <NavLink to="/quiz">Quiz</NavLink>
           <NavLink to="/matches">Matches</NavLink>
@@ -70,8 +60,6 @@ export default class App extends Component {
         </header>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/countries" component={Countries} />
-          <Route path="/add-country" component={AddCountry} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/secret" component={Secret} />
