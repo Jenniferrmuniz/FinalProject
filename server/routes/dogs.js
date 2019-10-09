@@ -12,7 +12,9 @@ router.get('/', (req, res, next) => {
   axios.post('https://api.petfinder.com/v2/oauth2/token', { grant_type: 'client_credentials', client_id: 'Bj8lhbrzZBdkzYPlF4CgDEGEVCnKbH4vxDnrldUe3OId9UUwng', client_secret: 'FeG7vRWLmRqWNc8iZbmGlhOcsJ10RKDMCd46zo0c' })
     .then(token => {
       console.log(token.data)
-      axios.get('https://api.petfinder.com/v2/animals?type=dog', { headers: { Authorization: `Bearer ${token.data.access_token}` } })
+      //axios.get('https://api.petfinder.com/v2/types/dog/breeds').then(res => console.log(res))
+      axios.get('https://api.petfinder.com/v2/animals?type=dog', 
+        { headers: { Authorization: `Bearer ${token.data.access_token}` } })
         .then(animals => {
 
           console.log(animals.data)
@@ -34,3 +36,8 @@ router.get('/', (req, res, next) => {
 
 
 module.exports = router
+
+
+
+// personality: 'anxious',
+// breeds: ['poodle', 'lab', 'frenchie']

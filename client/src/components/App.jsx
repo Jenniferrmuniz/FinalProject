@@ -58,7 +58,7 @@ export default class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/secret" component={Secret} />
           <Route path="/all-dogs" component={Dogs} />
-          <Route path="/quiz" component={Quiz} />
+          <Route path="/quiz" component={(props) => <Quiz fruit="watermelon?" />} />
           <Route path="/matches" component={Matches} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
