@@ -25,7 +25,7 @@ class Quiz extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.setPreferences(this.state);
+    this.props.answers(this.state);
   }
 
 
@@ -58,9 +58,10 @@ class Quiz extends Component {
           </div>
 
           <div>
-            <h6>Puppies are a lot of work! How much energy do you have?</h6>
+            <h6>What age are you looking to adopt?</h6>
+            <p>(Don't forget, the younger they are the more work and energy they require!)</p>
             <button type='button' name='age' value='puppy' onClick={this.setForm}>Puppy</button>
-            <button type='button' name='age' value='young' onClick={this.setForm}>Young</button>
+            <button type='button' name='age' value='young' onClick={this.setForm}> Young</button>
             <button type='button' name='age' value='adult' onClick={this.setForm}>Adult</button>
           </div>
 
@@ -79,32 +80,6 @@ class Quiz extends Component {
             <button type='button' name='active' value='false' onClick={this.setForm}>Not particularly active</button>
           </div>
 
-
-
-          {/* <div>
-          <h6>Where do you live?</h6>
-          <button type='button' name='location' value='apartment' onClick={this.setForm}>Apartment</button>
-          <button type='button' name='location' value='house' onClick={this.setForm}>House</button>
-          </div> */}
-
-          {/* <p>Would you consider yourself outdoorsy and active?</p>
-          <input></input>
-
-
-          <p>How much training would you like to do?</p>
-          <input></input> */}
-
-
-          {/* 
-          <p>How much do you exercise?</p>
-          <button type='button'>Frequently</button>
-          <button type='button'>Occassionally</button>
-          <button type='button'>Rarely</button> */}
-
-          {/* <p>Are you looking for your dog to be a jogging companion?</p>
-          <button>Yes</button>
-          <button>Now and then</button>
-          <button>No, I'm just looking for a companion</button> */}
 
           <button type='submit'>Submit Quiz</button>
         </form>

@@ -7,7 +7,6 @@ import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import api from '../api'
-import logo from '../logo.svg'
 import Dogs from './pages/Dogs'
 import Quiz from './pages/Quiz'
 import Matches from './pages/Matches'
@@ -20,16 +19,35 @@ export default class App extends Component {
     }
   }
 
+  state = {
+    match: {
+      location: null,
+      children: null,
+      otherPets: null,
+      age: null,
+      size: null,
+      active: null
+    }
+  }
+
   handleLogoutClick(e) {
     api.logout()
   }
+
+
+  setPreferences = (preferences) => {
+    this.setState({
+      match: preferences
+    })
+  }
+
+
+
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MERN Boilerplate</h1>
           <NavLink to="/" exact>
             Home
           </NavLink>
@@ -58,8 +76,8 @@ export default class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/secret" component={Secret} />
           <Route path="/all-dogs" component={Dogs} />
-          <Route path="/quiz" component={(props) => <Quiz fruit="watermelon?" />} />
-          <Route path="/matches" component={Matches} />
+          <Route path="/quiz" component={(props) => <Quiz answers={this.setPreferences} />} />
+          <Route path="/matches" component={ <Matches preferences={this.state.match}/> } />
           <Route render={() => <h2>404</h2>} />
         </Switch>
       </div>
