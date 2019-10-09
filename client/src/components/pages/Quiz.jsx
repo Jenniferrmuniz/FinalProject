@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Axios from '../../../../server/node_modules/axios'
 
 
 
@@ -25,7 +26,10 @@ class Quiz extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.answers(this.state);
+    //this.props.answers(this.state);
+    Axios.post('http://localhost:5000/api/savequiz', this.state, { withCredentials: true }).then(res => {
+      console.log(res)
+    })
   }
 
 
@@ -63,6 +67,8 @@ class Quiz extends Component {
             <button type='button' name='age' value='puppy' onClick={this.setForm}>Puppy</button>
             <button type='button' name='age' value='young' onClick={this.setForm}> Young</button>
             <button type='button' name='age' value='adult' onClick={this.setForm}>Adult</button>
+            <button type='button' name='age' value='senior' onClick={this.setForm}>Senior</button>
+
           </div>
 
 
@@ -80,6 +86,25 @@ class Quiz extends Component {
             <button type='button' name='active' value='false' onClick={this.setForm}>Not particularly active</button>
           </div>
 
+          <div>
+            <h6>Do you enjoy affection?</h6>
+            <button type='button' name='affection' value='alot'>Very much!</button>
+            <button type='button' name='affection' value='some'>I enjoy affection, but I also like having some space</button>
+            <button type='button' name='affection' value='none'>I'd rather be independent</button>
+          </div>
+
+          <div>
+            <h6>Are you looking for a dog that will keep you safe?</h6>
+            <button type='button' name='watchful' value='true'>Yes! I would love a guard dog</button>
+            <button type='button' name='watchful' value='false'>No, I just want a companion</button>
+          </div>
+
+
+          <div>
+            <h6>Do you prefer being out in the heat or the cold?</h6>
+            <button type='buttom' name='heat' value='heat'>I love the heat!</button>
+            <button type='buttom' name='heat' value='cold'>Cold sweater weather all the way!</button>
+          </div>
 
           <button type='submit'>Submit Quiz</button>
         </form>

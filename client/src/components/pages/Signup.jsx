@@ -30,6 +30,7 @@ export default class Signup extends Component {
       .signup(data)
       .then(result => {
         console.log('SUCCESS!')
+        this.props.isLoggedIn()
         this.props.history.push('/') // Redirect to the home page
       })
       .catch(err => this.setState({ message: err.toString() }))
