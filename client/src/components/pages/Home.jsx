@@ -1,11 +1,34 @@
 import React, { Component } from 'react'
+import { Route, Link, NavLink, Switch } from 'react-router-dom'
+
 
 export default class Home extends Component {
+
+
+
+  showHome = () => {
+    if (this.props.info.username) {
+      return <div>
+        <p>Logged in</p>
+      </div>
+    }
+    else {
+      return <div>
+        <p>Not logged in</p>
+        <Link to='/signup'>Get Started</Link>
+        <p>Already have an account? <Link to='/login'>Log in</Link></p>
+      </div>
+
+    }
+  }
+
+
+
   render() {
     return (
       <div className="Home">
         <h2>Home</h2>
-        <p>This is a sample project with the MERN stack</p>
+        {this.showHome()}
       </div>
     )
   }

@@ -47,6 +47,7 @@ export default class App extends Component {
     this.isLoggedIn()
   }
 
+
   isLoggedIn = () => {
     Axios.get('http://localhost:5000/api/user', { withCredentials: true }).then(result => {
       console.log(result)
@@ -88,9 +89,7 @@ export default class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <NavLink to="/" exact>
-            Home {this.state.user.username}
-          </NavLink>
+          <NavLink to="/" exact>Home {this.state.user.username}</NavLink>
           <NavLink to="/all-dogs">All dogs</NavLink>
           <NavLink to="/quiz">Quiz</NavLink>
           <NavLink to="/matches">Matches</NavLink>
@@ -110,7 +109,8 @@ export default class App extends Component {
         </header>
 
         <Switch>
-          <Route path="/" exact component={Home} />
+          {/* <Route path="/" exact component={Home} /> */}
+          <Route path="/" exact component={(props) => <Home info={this.state.user} {...props}/>} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/secret" component={Secret} />
