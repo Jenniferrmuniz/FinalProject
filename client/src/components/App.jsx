@@ -13,22 +13,12 @@ import Axios from '../../../server/node_modules/axios'
 export default class App extends Component {
 
   state = {
-    match: {
-      location: null,
-      children: null,
-      otherPets: null,
-      age: null,
-      size: null,
-      active: null
-    },
-    user: {
-
-    }
+    user: {}
   }
 
   handleLogoutClick(e) {
     api.logout().then(res => {
-      console.log(res)
+      // console.log(res)
       //this.isLoggedIn()
       this.setState({ user: {} })
     })
@@ -37,22 +27,22 @@ export default class App extends Component {
 
   setPreferences = (preferences) => {
     this.setState({
-      match: preferences
+      user: preferences
     })
   }
 
 
   componentDidMount() {
-    console.log('fetch the user once')
+    // console.log('fetch the user once')
     this.isLoggedIn()
   }
 
 
   isLoggedIn = () => {
     Axios.get('http://localhost:5000/api/user', { withCredentials: true }).then(result => {
-      console.log(result)
+      // console.log(result)
       let user = result.data
-      console.log(user)
+      // console.log(user)
       //if (user) {
       this.setState({ user })
       //}
@@ -110,13 +100,13 @@ export default class App extends Component {
 
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
-          <Route path="/" exact component={(props) => <Home info={this.state.user} {...props}/>} />
+          <Route path="/" exact component={(props) => <Home info={this.state.user} {...props} />} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/secret" component={Secret} />
           <Route path="/all-dogs" component={Dogs} />
-          <Route path="/quiz" component={(props) => <Quiz answers={this.setPreferences} />} />
-          <Route path="/matches" component={(props) => <Matches preferences={this.state.match} />} />
+          <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
+          <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
 

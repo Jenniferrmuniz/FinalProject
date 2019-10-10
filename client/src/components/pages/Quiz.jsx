@@ -7,6 +7,7 @@ import Axios from '../../../../server/node_modules/axios'
 class Quiz extends Component {
 
   state = {
+    
     location: null,
     children: null,
     otherPets: null,
@@ -19,6 +20,7 @@ class Quiz extends Component {
   }
 
 
+
   setForm = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -28,16 +30,18 @@ class Quiz extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    //this.props.answers(this.state);
+    this.props.answers(this.state);
     Axios.post('http://localhost:5000/api/savequiz', this.state, { withCredentials: true }).then(res => {
-      console.log(res)
+      // console.log(res)
+      // console.log(this);
+      this.props.history.push('/matches');
     })
   }
 
 
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div>
         Personallity quiz page!!!
