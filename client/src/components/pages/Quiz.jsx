@@ -4,7 +4,6 @@ import Axios from '../../../../server/node_modules/axios'
 
 
 
-
 class Quiz extends Component {
 
   state = {
@@ -13,7 +12,10 @@ class Quiz extends Component {
     otherPets: null,
     age: null,
     size: null,
-    active: null
+    active: null,
+    affection: null,
+    watchful: null,
+    heat: null
   }
 
 
@@ -88,22 +90,22 @@ class Quiz extends Component {
 
           <div>
             <h6>Do you enjoy affection?</h6>
-            <button type='button' name='affection' value='alot'>Very much!</button>
-            <button type='button' name='affection' value='some'>I enjoy affection, but I also like having some space</button>
-            <button type='button' name='affection' value='none'>I'd rather be independent</button>
+            <button type='button' name='affection' value='alot' onClick={this.setForm}>Very much!</button>
+            <button type='button' name='affection' value='some' onClick={this.setForm}>I enjoy affection, but I also like having some space</button>
+            <button type='button' name='affection' value='none' onClick={this.setForm}>I'd rather be independent</button>
           </div>
 
           <div>
             <h6>Are you looking for a dog that will keep you safe?</h6>
-            <button type='button' name='watchful' value='true'>Yes! I would love a guard dog</button>
-            <button type='button' name='watchful' value='false'>No, I just want a companion</button>
+            <button type='button' name='watchful' value='true' onClick={this.setForm}>Yes! I would love a guard dog</button>
+            <button type='button' name='watchful' value='false' onClick={this.setForm}>No, I just want a companion</button>
           </div>
 
 
           <div>
             <h6>Do you prefer being out in the heat or the cold?</h6>
-            <button type='buttom' name='heat' value='heat'>I love the heat!</button>
-            <button type='buttom' name='heat' value='cold'>Cold sweater weather all the way!</button>
+            <button type='button' name='heat' value='hot' onClick={this.setForm}>I love the heat!</button>
+            <button type='button' name='heat' value='cold' onClick={this.setForm}>Cold sweater weather all the way!</button>
           </div>
 
           <button type='submit'>Submit Quiz</button>

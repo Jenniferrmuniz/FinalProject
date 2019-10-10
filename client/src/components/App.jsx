@@ -14,7 +14,7 @@ export default class App extends Component {
 
   state = {
     match: {
-      location: 'miami',
+      location: null,
       children: null,
       otherPets: null,
       age: null,

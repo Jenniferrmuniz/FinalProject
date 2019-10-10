@@ -600,212 +600,212 @@
     "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "German Shorthaired Pointer",
+    "energy": 5,
+    "exercise": 5,
+    "affection": 4,
+    "watchfulness": 3,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "German Wirehaired Pointer",
+    "energy": 5,
+    "exercise": 5,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Golden Retriever",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 2,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Great Dane",
+    "energy": 2,
+    "exercise": 2,
+    "affection": 4,
+    "watchfulness": 3,
+    "heatSensitvity": 4
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Great Pyrenees",
+    "energy": 1,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitvity": 5
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Greyhound",
+    "energy": 2,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 2,
+    "heatSensitvity": 4
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Havanese",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Italian Greyhound",
+    "energy": 4,
+    "exercise": 2,
+    "affection": 5,
+    "watchfulness": 1,
+    "heatSensitvity": 2
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Jack Russell Terrier",
+    "energy": 5,
+    "exercise": 4,
+    "affection": 3,
+    "watchfulness": 2,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Jindo",
+    "energy": 4,
+    "exercise": 4,
+    "affection": 5,
+    "watchfulness": 3,
+    "heatSensitvity": 2
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Labrador Retriever",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 2,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Lhasa Apso",
+    "energy": 3,
+    "exercise": 2,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitvity": 4
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Louisiana Catahoula Leopard Dog",
+    "energy": 5,
+    "exercise": 5,
+    "affection": 4,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Maltese",
+    "energy": 4,
+    "exercise": 1,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitvity": 4
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Mastiff",
+    "energy": 1,
+    "exercise": 2,
+    "affection": 4,
+    "watchfulness": 4,
+    "heatSensitvity": 4
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Miniature Pinscher",
+    "energy": 5,
+    "exercise": 2,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Miniature Poodle",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Miniature Schnauzer",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Newfoundland Dog",
+    "energy": 2,
+    "exercise": 2,
+    "affection": 5,
+    "watchfulness": 4,
+    "heatSensitvity": 5
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Papillon",
+    "energy": 4,
+    "exercise": 1,
+    "affection": 5,
+    "watchfulness": 1,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Parson Russell Terrier",
+    "energy": 5,
+    "exercise": 4,
+    "affection": 3,
+    "watchfulness": 2,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Pekingese",
+    "energy": 1,
+    "exercise": 1,
+    "affection": 2,
+    "watchfulness": 1,
+    "heatSensitvity": 5
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Pembroke Welsh Corgi",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Plott Hound",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Pomeranian",
+    "energy": 4,
+    "exercise": 1,
+    "affection": 1,
+    "watchfulness": 1,
+    "heatSensitvity": 3
   },
   {
-    "name": "00000000",
-    "energy": 00000000,
-    "exercise": 00000000,
-    "affection": 00000000,
-    "watchfulness": 00000000,
-    "heatSensitvity": 00000000
+    "name": "Poodle",
+    "energy": 3,
+    "exercise": 4,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitvity": 3
   },
   {
     "name": "00000000",
