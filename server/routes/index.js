@@ -27,12 +27,10 @@ router.get('/secret', isLoggedIn, (req, res, next) => {
 //Post the form to save quiz 
 router.post('/savequiz', isLoggedIn, (req, res, next) => {
   console.log(req.body)
-  User.findById(req.user._id) //DHF97807989879fdg
+  User.findById(req.user._id)
     .then((user) => {
-      user.preferences = req.body  //req.body
+      user.preferences = req.body
       user.save((err, doc) => {
-        // console.log(user)
-        // console.log(err, doc)
         res.json({ saved: doc })
       })
     }).catch(err => console.error(err))

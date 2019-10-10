@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class Dogs extends Component {
   state = {
@@ -36,24 +37,15 @@ class Dogs extends Component {
     axios.get('http://localhost:5000/api/all-dogs').then(res => {
 
       let list = res.data.animals.map((animal, i) => {
-        // console.log(animal)
-        return (
-          //   <div key={i}>
-          //   <h1>HELLO</h1>
-          //   <p>{animal.name}</p>
-          //   <p><img src='{animal.photos[i].full}' /></p>
-          // </div>
-          animal
-        );
+        return (animal);
       })
       this.setState({
         dogs: list
       })
       console.log("STATE", this.state);
-      // return list;
+
     })
 
-    // }
   }
 
   showDogs = () => {
@@ -63,11 +55,10 @@ class Dogs extends Component {
         console.log(dog.photos[0].full)
       }
       return (
-        <div key={i}>
+        <Link to='/' key={i} className='eachDog'>
           <p>{dog.name}</p>
-
-          {dog.photos.length > 0 && <p><img src={dog.photos[0].medium} /></p>}
-        </div>
+          {dog.photos.length > 0 && <p><img src={dog.photos[0].medium} alt='dog pic'/></p>}
+        </Link>
       )
     })
     return dogs

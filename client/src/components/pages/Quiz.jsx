@@ -7,7 +7,6 @@ import Axios from '../../../../server/node_modules/axios'
 class Quiz extends Component {
 
   state = {
-    
     location: null,
     children: null,
     otherPets: null,
@@ -18,7 +17,6 @@ class Quiz extends Component {
     watchful: null,
     heat: null
   }
-
 
 
   setForm = (e) => {
@@ -32,8 +30,6 @@ class Quiz extends Component {
     e.preventDefault();
     this.props.answers(this.state);
     Axios.post('http://localhost:5000/api/savequiz', this.state, { withCredentials: true }).then(res => {
-      // console.log(res)
-      // console.log(this);
       this.props.history.push('/matches');
     })
   }
@@ -74,7 +70,6 @@ class Quiz extends Component {
             <button type='button' name='age' value='young' onClick={this.setForm}> Young</button>
             <button type='button' name='age' value='adult' onClick={this.setForm}>Adult</button>
             <button type='button' name='age' value='senior' onClick={this.setForm}>Senior</button>
-
           </div>
 
 
@@ -110,6 +105,7 @@ class Quiz extends Component {
             <h6>Do you prefer being out in the heat or the cold?</h6>
             <button type='button' name='heat' value='hot' onClick={this.setForm}>I love the heat!</button>
             <button type='button' name='heat' value='cold' onClick={this.setForm}>Cold sweater weather all the way!</button>
+            <button type='button' name='heat' value='average' onClick={this.setForm}>Not too hot but not too cold!</button>
           </div>
 
           <button type='submit'>Submit Quiz</button>
