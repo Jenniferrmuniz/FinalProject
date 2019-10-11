@@ -1,99 +1,69 @@
-// --------------------
-// Definition of variables
-$primary: #32c3ff;
+// ice blue = #99D3DF
+// fresh water = #88BBD6
+// plaster = #CDCDCD
+// linen = #E9E9E9
 
-// ----------------------------------------
-// To install Boostrap:
-// 1) Run in the client folder: $ npm i bootstrap
-// 2) Import bootstrap with the following line
-// @import '../node_modules/bootstrap/scss/bootstrap.scss';
-//
-// To install Reactstrap:
-// 1) Run in the client folder: $ npm i reactstrap
-// 2) Go to the official documentation and take some examples: https://reactstrap.github.io/
-// import { Button } from 'reactstrap';
-// <Button color="danger">Danger!</Button>
-// ----------------------------------------
+// font-family: "Papyrus"
+// font-family: "Andale Mono"
 
-// --------------------
-// Style reusable for all components
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 
-.info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
-  color: white;
-}
+body{
+  background-color: #CDCDCD;
+  margin: 0px;
+  font-family: "Andale Mono";
 
-.info.info-danger {
-  background-color: #e73f3f;
-}
 
-// --------------------
-// Style for App component
-.App {
-  text-align: center;
 
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
+  .App-header{
+    background-color: #99D3DF;
+    display: flex;
+    justify-content: space-around;
 
-  .App-header {
-    background-color: $primary;
-    padding: 20px;
-    color: white;
-
-    a {
+    .navlink{
       color: white;
-      padding: 0 5px;
-      text-decoration: unset;
+      text-decoration: none;
+      font-family: "Papyrus";
+      padding: 20px;
+    }
+    .navlink:hover{
+      background-color: #88BBD6;
     }
 
-    a.active {
-      font-weight: bold;
-    }
   }
 
-  .App-title {
-    font-size: 1.5em;
-  }
 
-  .App-intro {
-    font-size: large;
-  }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
+  .dogPage{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .dogListWrapper{
+      margin: 50px;
+      display:flex;
+      flex-direction: column;
     }
 
-    to {
-      transform: rotate(360deg);
+    .eachDog{
+
+      background-color: #E9E9E9;
+      width: 250px;
+      height: 100px;
+      margin: 15px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      p{
+        font-family: "Papyrus";
+      }
+
+      img{
+        height: 50px;
+        width: auto;
+      }
     }
-  }
-}
 
-// --------------------
-// Style for Home component
-.Home {
-  p {
-    font-size: 1.2em;
-  }
-}
-
-// --------------------
-// Style for Secret component
-.Secret {
-  .result {
-    font-size: 1.2em;
-    color: $primary;
   }
 }

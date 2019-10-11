@@ -61,30 +61,20 @@ const breeds = require('../bin/breeds')
 
 
 
+
 router.get('/', isLoggedIn, async (req, res, next) => {
 
 
+  //let breedScores;
   let token = await axios.post('https://api.petfinder.com/v2/oauth2/token', { grant_type: 'client_credentials', client_id: process.env.API_KEY, client_secret: process.env.API_SECRET }).catch(err => console.error(err))
-
-  let animal = 'dog'
-
 
   let user = await User.findById(req.user._id).catch(err => console.error(err))
 
-
-  // console.log(user, '-=-=-?-=-=-', breeds)
-  //let data = animals.data
-  // data.user = user
-  // data.breeds = breeds
-
-
-  console.log(user);
-
   let { location, children, otherPets, age, size, active, affection, watchful, heat } = user.preferences;
-  console.log(location);
 
+  let animal = 'dog'
   //NEED TO FIX LOCATION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  let filteredAPIcall = `https://api.petfinder.com/v2/animals?type=${animal}&size=${size}&age=${age}&location=33028`
+  let filteredAPIcall = `https://api.petfinder.com/v2/animals?type=${animal}&status=adoptable&size=${size}&age=${age}&location=33028&limit=100`
 
   if (children) {
     filteredAPIcall = filteredAPIcall + `&good_with_children=${children}`
@@ -100,71 +90,72 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     filteredAPIcall = filteredAPIcall + `&good_with_cats=true`
   }
 
+
   let dogs = await axios.get(filteredAPIcall, { headers: { Authorization: `Bearer ${token.data.access_token}` } }).catch(err => console.error(err))
 
 
+  let breedMatches = [];
+  let breedMatch;
+  for (let i = 0; i < breeds.length; i++) {
+    breedMatch = getComparison(breeds[i]);
+    breedMatches.push(breedMatch);
+  }
+  breedMatches.sort((a, b) => {
+    if (a.score < b.score) {
+      return -1;
+    }
+    if (a.score > b.score) {
+      return 1;
+    }
+    return 0;
+  });
+  //breedScores = breedMatches
+  let filtered = sortAnimals();
 
 
 
-  console.log('animals ============', dogs.data.animals[0].breeds.primary);
 
+  function sortAnimals() {
 
-  dogs.data.animals.map((eachDog) => {
+    let filteredDogs = [];
 
-    let mainBreed = eachDog.breeds.primary;
-
-    for (let i = 0; i < breeds.length; i++) {
-
-      if (mainBreed == breeds[i].name) {
-        let total = getComparison(breed[i]);
-
-      } 
-      else {
-
+    for (let i = 0; i < breedMatches.length; i++) {
+      for (let j = 0; j < dogs.data.animals.length; j++) {
+        if (breedMatches[i].name === dogs.data.animals[j].breeds.primary) {
+          let matchingPup = dogs.data.animals[j];
+          matchingPup.total = breedMatches[i];
+          filteredDogs.push(matchingPup);
+        }
       }
-
     }
-
-  })
-
-
-
-
-  getComparison = (breedInfo) => {
-
-
-    let total = {
-      totalEnergy: breedInfo.energy - user.preferences.energy,
-      totalExercise: breedInfo.exercise - user.preferences.exercise,
-      totalAffection: breedInfo.affection - user.preferences.affection,
-      totalWatchful: breedInfo.watchfulness - user.preferences.watchful,
-      totalHeat: breedInfo.heatSensitivity - user.preferences.heat,
-      Score: total.totalEnergy + total.totalExercise + total.totalAffection + total.totalWatchful + total.totalHeat
-    }
-
-    // let totalScore = total.totalEnergy + total.totalExercise + total.totalAffection + total.totalWatchful + total.totalHeat;
-
-
-    return total;
+    return filteredDogs;
   }
 
 
 
+  function getComparison(breedInfo) {
+
+    let totalActive = Math.abs((breedInfo.exercise + breedInfo.energy) - Number(user.preferences.active));
+    let totalAffection = Math.abs(Number(breedInfo.affection) - Number(user.preferences.affection));
+    let totalWatchful = Math.abs(Number(breedInfo.watchfulness) - Number(user.preferences.watchful));
+    let totalHeat = Math.abs(Number(breedInfo.heatSensitivity) - Number(user.preferences.heat));
 
 
+    let total = {
+      name: breedInfo.name,
+      totalActive,
+      totalAffection,
+      totalWatchful,
+      totalHeat,
+      score: totalActive + totalAffection + totalWatchful + totalHeat
+    }
 
+    return total;
+  }
 
+  console.log(filtered);
 
-
-
-
-
-
-
-
-
-
-  res.json(dogs.data);
+  res.json({ filtered, somethin: 'else' });
 
 })
 
@@ -177,20 +168,8 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 
 
-
-// Route to add dogs
-
-
-
-
-
-
-
 //Breeds
 router.get('/breeds', (req, res, next) => {
-
-
-
 
   // Breed.create({
   //   name: "Bullmastiff",
@@ -198,7 +177,7 @@ router.get('/breeds', (req, res, next) => {
   //   exercise: 2,
   //   affection: 3,
   //   watchfulness: 5,
-  //   heatSensitvity: 5
+  //   heatSensitivity: 5
   // })
   //   .then((response) => {
   //     console.log(response)

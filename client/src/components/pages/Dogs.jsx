@@ -49,7 +49,8 @@ class Dogs extends Component {
 
     axios.get('http://localhost:5000/api/all-dogs', { withCredentials: true }).then(res => {
 
-      let list = res.data.animals.map((animal, i) => {
+      console.log(res.data);
+      let list = res.data.filtered.map((animal, i) => {
         return (animal);
       })
       this.setState({
@@ -63,18 +64,13 @@ class Dogs extends Component {
 
   showDogs = () => {
     let dogs = this.state.dogs.map((dog, i) => {
-      console.log(dog);
-      if (dog.photos.length > 0) {
-        // console.log(dog.photos[0].full)
-      }
       return (
         <Link to='/' key={i} className='eachDog'>
           <p>{dog.name}</p>
-          {dog.photos.length > 0 && <p><img src={dog.photos[0].medium} alt='dog pic' /></p>}
+          {dog.photos.length > 0 && <img src={dog.photos[0].medium} alt='dog pic' />}
         </Link>
       )
     })
-
     return dogs
   }
 
@@ -91,15 +87,22 @@ class Dogs extends Component {
 
 
 
-
-
-
+  getDogInfo = () => {
+    console.log(this.state.dogs)
+  }
 
   render() {
     return (
-      <div>
-        Dogs Page!!!
-        {this.showDogs()}
+      <div className='dogPage'>
+        <div className='dogListWrapper'>
+          {this.showDogs()}
+        </div>
+
+        <div className='dogInfoWrapper'>
+          <p>dog name</p>
+          {this.getDogInfo()}
+        </div>
+
       </div>
     )
   }

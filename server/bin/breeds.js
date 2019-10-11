@@ -5,7 +5,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Afghan Hound",
@@ -13,7 +13,7 @@ module.exports = [
     "exercise": 3,
     "affection": 1,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Airedale Terrier",
@@ -21,7 +21,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Akita",
@@ -29,7 +29,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Alaskan Malamute",
@@ -37,7 +37,7 @@ module.exports = [
     "exercise": 4,
     "affection": 5,
     "watchfulness": 3,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "American Bulldog",
@@ -45,7 +45,7 @@ module.exports = [
     "exercise": 4,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 1
+    "heatSensitivity": 1
   },
   {
     "name": "American Eskimo Dog",
@@ -53,7 +53,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "American Foxhound",
@@ -61,7 +61,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "American Hairless Terrier",
@@ -69,7 +69,7 @@ module.exports = [
     "exercise": 2,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "American Staffordshire Terrier",
@@ -77,7 +77,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "American Water Spaniel",
@@ -85,7 +85,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Anatolian Shepherd",
@@ -93,7 +93,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Australian Cattle Dog / Blue Heeler",
@@ -101,7 +101,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Australian Shepherd",
@@ -109,7 +109,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Australian Terrier",
@@ -117,7 +117,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Basenji",
@@ -125,7 +125,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Basset Hound",
@@ -133,7 +133,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Beagle",
@@ -141,7 +141,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Bearded Collie",
@@ -149,7 +149,7 @@ module.exports = [
     "exercise": 4,
     "affection": 4,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Beauceron",
@@ -157,7 +157,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Bedlington Terrier",
@@ -165,7 +165,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Belgian Shepherd / Malinois",
@@ -173,7 +173,7 @@ module.exports = [
     "exercise": 5,
     "affection": 1,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Belgian Shepherd / Sheepdog",
@@ -181,7 +181,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Belgian Shepherd / Tervuren",
@@ -189,7 +189,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Belgian Shepherd Dog",
@@ -197,7 +197,7 @@ module.exports = [
     "exercise": 5,
     "affection": 5,
     "watchfulness": 3,
-    "heatSensitvity": 1
+    "heatSensitivity": 1
   },
   {
     "name": "Bernese Mountain Dog",
@@ -205,7 +205,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Bichon Frise",
@@ -213,7 +213,7 @@ module.exports = [
     "exercise": 2,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Black and Tan Coonhound",
@@ -221,7 +221,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Black Russian Terrier",
@@ -229,7 +229,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Bloodhound",
@@ -237,7 +237,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Bluetick Coonhound",
@@ -245,7 +245,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Boerboel",
@@ -253,7 +253,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Border Collie",
@@ -261,7 +261,7 @@ module.exports = [
     "exercise": 5,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Border Terrier",
@@ -269,7 +269,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Borzoi",
@@ -277,7 +277,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Boston Terrier",
@@ -285,7 +285,7 @@ module.exports = [
     "exercise": 1,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Bouvier des Flandres",
@@ -293,7 +293,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Boxer",
@@ -301,7 +301,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 5,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Boykin Spaniel",
@@ -309,7 +309,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Briard",
@@ -317,7 +317,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Brittany Spaniel",
@@ -325,7 +325,7 @@ module.exports = [
     "exercise": 5,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Brussels Griffon",
@@ -333,7 +333,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Bull Terrier",
@@ -341,7 +341,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Bullmastiff",
@@ -349,7 +349,7 @@ module.exports = [
     "exercise": 2,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Cairn Terrier",
@@ -357,7 +357,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Canaan Dog",
@@ -365,7 +365,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Cane Corso",
@@ -373,7 +373,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Cardigan Welsh Corgi",
@@ -381,7 +381,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Carolina Dog",
@@ -389,7 +389,7 @@ module.exports = [
     "exercise": 2,
     "affection": 2,
     "watchfulness": 4,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Cavalier King Charles Spaniel",
@@ -397,7 +397,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Chesapeake Bay Retriever",
@@ -405,7 +405,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Chihuahua",
@@ -413,7 +413,7 @@ module.exports = [
     "exercise": 1,
     "affection": 2,
     "watchfulness": 1,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Chinese Crested Dog",
@@ -421,7 +421,7 @@ module.exports = [
     "exercise": 1,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Chinook",
@@ -429,7 +429,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 2,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Chow Chow",
@@ -437,7 +437,7 @@ module.exports = [
     "exercise": 2,
     "affection": 2,
     "watchfulness": 4,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Cirneco dell'Etna",
@@ -445,7 +445,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Clumber Spaniel",
@@ -453,7 +453,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Collie",
@@ -461,7 +461,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 3,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Coton de Tulear",
@@ -469,7 +469,7 @@ module.exports = [
     "exercise": 2,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Dachshund",
@@ -477,7 +477,7 @@ module.exports = [
     "exercise": 2,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Dalmatian",
@@ -485,7 +485,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Dandie Dinmont Terrier",
@@ -493,7 +493,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Doberman Pinscher",
@@ -501,7 +501,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Dogo Argentino",
@@ -509,7 +509,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Dogue de Bordeaux",
@@ -517,7 +517,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 5,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Dutch Shepherd",
@@ -525,7 +525,7 @@ module.exports = [
     "exercise": 4,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 1
+    "heatSensitivity": 1
   },
   {
     "name": "English Bulldog",
@@ -533,7 +533,7 @@ module.exports = [
     "exercise": 1,
     "affection": 5,
     "watchfulness": 2,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "English Coonhound",
@@ -541,7 +541,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "English Pointer",
@@ -549,7 +549,7 @@ module.exports = [
     "exercise": 4,
     "affection": 4,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "English Setter",
@@ -557,7 +557,7 @@ module.exports = [
     "exercise": 4,
     "affection": 4,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "English Shepherd",
@@ -565,7 +565,7 @@ module.exports = [
     "exercise": 5,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "English Springer Spaniel",
@@ -573,7 +573,7 @@ module.exports = [
     "exercise": 4,
     "affection": 5,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Flat-Coated Retriever",
@@ -581,7 +581,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "French Bulldog",
@@ -589,7 +589,7 @@ module.exports = [
     "exercise": 1,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "German Shepherd Dog",
@@ -597,7 +597,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 5,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "German Shorthaired Pointer",
@@ -605,7 +605,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 3,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "German Wirehaired Pointer",
@@ -613,7 +613,7 @@ module.exports = [
     "exercise": 5,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Golden Retriever",
@@ -621,7 +621,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Great Dane",
@@ -629,7 +629,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 3,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Great Pyrenees",
@@ -637,7 +637,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Greyhound",
@@ -645,7 +645,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Havanese",
@@ -653,7 +653,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Italian Greyhound",
@@ -661,7 +661,7 @@ module.exports = [
     "exercise": 2,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Jack Russell Terrier",
@@ -669,7 +669,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Jindo",
@@ -677,7 +677,7 @@ module.exports = [
     "exercise": 4,
     "affection": 5,
     "watchfulness": 3,
-    "heatSensitvity": 2
+    "heatSensitivity": 2
   },
   {
     "name": "Labrador Retriever",
@@ -685,7 +685,7 @@ module.exports = [
     "exercise": 3,
     "affection": 5,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Lhasa Apso",
@@ -693,7 +693,7 @@ module.exports = [
     "exercise": 2,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Louisiana Catahoula Leopard Dog",
@@ -701,7 +701,7 @@ module.exports = [
     "exercise": 5,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Maltese",
@@ -709,7 +709,7 @@ module.exports = [
     "exercise": 1,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Mastiff",
@@ -717,7 +717,7 @@ module.exports = [
     "exercise": 2,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 4
+    "heatSensitivity": 4
   },
   {
     "name": "Miniature Pinscher",
@@ -725,7 +725,7 @@ module.exports = [
     "exercise": 2,
     "affection": 3,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Miniature Poodle",
@@ -733,7 +733,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Miniature Schnauzer",
@@ -741,7 +741,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Newfoundland Dog",
@@ -749,7 +749,7 @@ module.exports = [
     "exercise": 2,
     "affection": 5,
     "watchfulness": 4,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Papillon",
@@ -757,7 +757,7 @@ module.exports = [
     "exercise": 1,
     "affection": 5,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Parson Russell Terrier",
@@ -765,7 +765,7 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 2,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Pekingese",
@@ -773,7 +773,7 @@ module.exports = [
     "exercise": 1,
     "affection": 2,
     "watchfulness": 1,
-    "heatSensitvity": 5
+    "heatSensitivity": 5
   },
   {
     "name": "Pembroke Welsh Corgi",
@@ -781,7 +781,7 @@ module.exports = [
     "exercise": 3,
     "affection": 4,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Plott Hound",
@@ -789,7 +789,7 @@ module.exports = [
     "exercise": 3,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Pomeranian",
@@ -797,7 +797,7 @@ module.exports = [
     "exercise": 1,
     "affection": 1,
     "watchfulness": 1,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
   },
   {
     "name": "Poodle",
@@ -805,6 +805,198 @@ module.exports = [
     "exercise": 4,
     "affection": 3,
     "watchfulness": 4,
-    "heatSensitvity": 3
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Pug",
+    "energy": 3,
+    "exercise": 2,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 5
+  },
+  {
+    "name": "Rat Terrier",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 2,
+    "heatSensitivity": 2
+  },
+  {
+    "name": "Redbone Coonhound",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 2,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Rhodesian Ridgeback",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Rottweiler",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 2,
+    "watchfulness": 5,
+    "heatSensitivity": 4
+  },
+  {
+    "name": "Saint Bernard",
+    "energy": 2,
+    "exercise": 2,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 5
+  },
+  {
+    "name": "Saluki",
+    "energy": 2,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 2,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Schnauzer",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 2,
+    "watchfulness": 5,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Shar-Pei",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 1,
+    "watchfulness": 4,
+    "heatSensitivity": 4
+  },
+  {
+    "name": "Shetland Sheepdog / Sheltie",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Shiba Inu",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 3,
+    "watchfulness": 3,
+    "heatSensitivity": 4
+  },
+  {
+    "name": "Shih Tzu",
+    "energy": 3,
+    "exercise": 1,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 5
+  },
+  {
+    "name": "Siberian Husky",
+    "energy": 3,
+    "exercise": 4,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 5
+  },
+  {
+    "name": "Smooth Fox Terrier",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Staffordshire Bull Terrier",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 3,
+    "heatSensitivity": 4
+  },
+  {
+    "name": "Treeing Walker Coonhound",
+    "energy": 4,
+    "exercise": 4,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Vizsla",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Weimaraner",
+    "energy": 5,
+    "exercise": 4,
+    "affection": 3,
+    "watchfulness": 4,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "West Highland White Terrier / Westie",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Wheaten Terrier",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 5,
+    "watchfulness": 2,
+    "heatSensitivity": 5
+  },
+  {
+    "name": "Whippet",
+    "energy": 3,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Wire Fox Terrier",
+    "energy": 4,
+    "exercise": 3,
+    "affection": 4,
+    "watchfulness": 1,
+    "heatSensitivity": 3
+  },
+  {
+    "name": "Xoloitzcuintli / Mexican Hairless",
+    "energy": 3,
+    "exercise": 4,
+    "affection": 4,
+    "watchfulness": 4,
+    "heatSensitivity": 1
+  },
+  {
+    "name": "Yorkshire Terrier",
+    "energy": 4,
+    "exercise": 1,
+    "affection": 3,
+    "watchfulness": 1,
+    "heatSensitivity": 4
   }
 ]

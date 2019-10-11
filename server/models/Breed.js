@@ -8,7 +8,7 @@ const breedSchema = new Schema({
   exercise: Number,
   affection: Number,
   watchfulness: Number,
-  heatSensitvity: Number
+  heatSensitivity: Number
 })
 
 const Breed = mongoose.model('Breed', breedSchema)

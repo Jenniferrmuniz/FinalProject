@@ -55,8 +55,8 @@ export default class App extends Component {
 
         <React.Fragment>
 
-          <Link to="/" onClick={e => this.handleLogoutClick(e)}>Logout</Link>
-          <NavLink to="/secret">Secret</NavLink>
+          <Link className='navlink' to="/" onClick={e => this.handleLogoutClick(e)}>Logout</Link>
+          <NavLink className='navlink' to="/secret">Secret</NavLink>
 
         </React.Fragment>
 
@@ -65,8 +65,8 @@ export default class App extends Component {
       return (
         <React.Fragment>
 
-          <NavLink to="/signup">Signup</NavLink>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink className='navlink' to="/signup">Signup</NavLink>
+          <NavLink className='navlink' to="/login">Login</NavLink>
 
         </React.Fragment>
 
@@ -79,10 +79,10 @@ export default class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <NavLink to="/" exact>Home {this.state.user.username}</NavLink>
-          <NavLink to="/all-dogs">All dogs</NavLink>
-          <NavLink to="/quiz">Quiz</NavLink>
-          <NavLink to="/matches">Matches</NavLink>
+          <NavLink className='navlink' to="/" exact>Home {this.state.user.username}</NavLink>
+          <NavLink className='navlink' to="/all-dogs">All dogs</NavLink>
+          <NavLink className='navlink' to="/quiz">Quiz</NavLink>
+          <NavLink className='navlink' to="/matches">Matches</NavLink>
 
           {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
