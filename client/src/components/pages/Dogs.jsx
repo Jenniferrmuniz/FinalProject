@@ -75,20 +75,23 @@ class Dogs extends Component {
   }
 
 
+  // getPreferences = () => {
 
-  getPreferences = () => {
+  //   let preferences = this.state.user.preferences;
+  //   let { location, children, otherPets, age, size, active, affection, watchful, heat } = this.state.user.preferences
 
-    let preferences = this.state.user.preferences;
-    let { location, children, otherPets, age, size, active, affection, watchful, heat } = this.state.user.preferences
+  //   console.log(location);
 
-    console.log(location);
-
-  }
+  // }
 
 
 
   getDogInfo = () => {
-    console.log(this.state.dogs)
+    console.log(this.state.dogs[0])
+
+    //let dogName = this.state.dogs[0].name;
+
+    //return <p>{dogName}</p>
   }
 
   render() {
