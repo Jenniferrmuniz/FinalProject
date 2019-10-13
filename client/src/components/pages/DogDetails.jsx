@@ -179,7 +179,6 @@ class DogDetails extends Component {
       <div>
         <div className='infoWrapper'>
           {this.getInfo()}
-          {/* {this.getBreedInfo()} */}
         </div>
         <div className={"emailWrapper " + (this.state.toggleContact ? 'show' : 'hidden')}>
           <button className='closeEmailWrapper' onClick={() => this.setState({ toggleContact: !this.state.toggleContact })}>X</button>
