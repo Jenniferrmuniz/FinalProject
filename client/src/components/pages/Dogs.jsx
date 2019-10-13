@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Route, Link, NavLink, Switch } from 'react-router-dom'
 
 
 
@@ -104,6 +104,16 @@ class Dogs extends Component {
         <div className='dogInfoWrapper'>
           <p>dog name</p>
           {this.getDogInfo()}
+
+          <Switch>
+
+            <Route path="/all-dogs/:id" component={(props) => {}} />
+
+          </Switch>
+
+
+
+
         </div>
 
       </div>

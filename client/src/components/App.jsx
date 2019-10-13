@@ -104,7 +104,7 @@ export default class App extends Component {
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/secret" component={Secret} />
-          <Route path="/all-dogs" component={Dogs} />
+          <Route exact path="/all-dogs" component={Dogs} />
           <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />
