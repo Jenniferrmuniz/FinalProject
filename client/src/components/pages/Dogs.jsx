@@ -75,6 +75,7 @@ class Dogs extends Component {
   }
 
 
+
   // getPreferences = () => {
 
   //   let preferences = this.state.user.preferences;
@@ -87,11 +88,22 @@ class Dogs extends Component {
 
 
   getDogInfo = () => {
-    console.log(this.state.dogs[0])
-
+    // console.log(this.state.dogs[0])
+    console.log(this.state.dogs);
     //let dogName = this.state.dogs[0].name;
 
     //return <p>{dogName}</p>
+  }
+
+
+
+
+  getDogById = () => {
+    for (let i = 0; i < this.state.dogs.length; i++) {
+      //if(this.state.dogs[i] === ){
+
+     // }
+    }
   }
 
   render() {
@@ -107,7 +119,7 @@ class Dogs extends Component {
 
           <Switch>
 
-            <Route path="/all-dogs/:id" component={(props) => {}} />
+            <Route path="/all-dogs/:id" component={(props) => { }} />
 
           </Switch>
 
