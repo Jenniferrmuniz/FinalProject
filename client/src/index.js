@@ -8,7 +8,6 @@ import App from './components/App.jsx'
 ReactDOM.render(
   <Router>
     <App />
-    
   </Router>,
   document.getElementById('root')
 )

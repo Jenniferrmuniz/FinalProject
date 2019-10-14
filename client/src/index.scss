@@ -88,24 +88,39 @@ body{
       background-color: #E9E9E9;
       margin: 65px;
       height: 550px;
-      width: 700px;
+      width: 700px;      
 
 
       .dogName{
         display:flex;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: center;
         img{
-          height: 150px;
+          height: 200px;
           margin: 40px;
         }
         h1{
-          align-self: center;
-          justify-self: center;
+          font-family: "Papyrus";
           margin-left: 50px;
         }
       }
 
     }
   }
+}
+
+
+button:active{
+   background:none;
+}
+button {
+  padding: 20px;
+  transition: all .2s;
+}
+button{
+  outline:none;
+}
+.selected{
+  background:#88BBD6;
 }

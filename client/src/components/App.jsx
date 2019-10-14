@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import Home from './pages/Home'
-import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import api from '../api'
@@ -54,20 +53,18 @@ export default class App extends Component {
       return (
 
         <React.Fragment>
-
+          <NavLink className='navlink' to="/all-dogs">All dogs</NavLink>
+          <NavLink className='navlink' to="/quiz">Quiz</NavLink>
+          <NavLink className='navlink' to="/matches">Matches</NavLink>
           <Link className='navlink' to="/" onClick={e => this.handleLogoutClick(e)}>Logout</Link>
-          <NavLink className='navlink' to="/secret">Secret</NavLink>
-
         </React.Fragment>
 
       )
     } else {
       return (
         <React.Fragment>
-
           <NavLink className='navlink' to="/signup">Signup</NavLink>
           <NavLink className='navlink' to="/login">Login</NavLink>
-
         </React.Fragment>
 
       )
@@ -80,9 +77,6 @@ export default class App extends Component {
 
         <header className="App-header">
           <NavLink className='navlink' to="/" exact>Home {this.state.user.username}</NavLink>
-          <NavLink className='navlink' to="/all-dogs">All dogs</NavLink>
-          <NavLink className='navlink' to="/quiz">Quiz</NavLink>
-          <NavLink className='navlink' to="/matches">Matches</NavLink>
 
           {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
@@ -92,10 +86,6 @@ export default class App extends Component {
 
           {this.showNav()}
 
-
-
-
-
         </header>
 
         <Switch>
@@ -103,7 +93,6 @@ export default class App extends Component {
           <Route path="/" exact component={(props) => <Home info={this.state.user} {...props} />} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
-          <Route path="/secret" component={Secret} />
           <Route path="/all-dogs" component={Dogs} />
           <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
@@ -111,7 +100,7 @@ export default class App extends Component {
         </Switch>
 
 
-          
+
       </div>
     )
   }

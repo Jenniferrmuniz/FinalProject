@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import DogDetails from './DogDetails'
+import NoneSelected from './NoneSelected'
 
 
 
@@ -66,7 +67,7 @@ class Dogs extends Component {
     let dogs = this.state.dogs.map((dog, i) => {
       return (
         <Link to={'/all-dogs/' + dog.id} key={i} className='eachDog'>
-          <p>{dog.name}</p>
+          <p>{i+1}. {dog.name}</p>
           {dog.photos.length > 0 && <img src={dog.photos[0].medium} alt='dog pic' />}
         </Link>
       )
@@ -96,6 +97,7 @@ class Dogs extends Component {
 
         <div className='dogInfoWrapper'>
           <Switch>
+            <Route exact path="/all-dogs" component={(props) => <NoneSelected />} />
             <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} />} />
           </Switch>
         </div>

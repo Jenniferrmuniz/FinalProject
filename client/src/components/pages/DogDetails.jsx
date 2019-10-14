@@ -3,21 +3,31 @@ import React, { Component } from 'react'
 
 class DogDetails extends Component {
 
+  state = {
+    adj: ['great', 'good', 'meh', 'stinky', 'terrible']
+  }
 
   getInfo = () => {
     let str;
     if (this.props.dogInfo) {
+      let total = this.props.dogInfo.total
+      for (let k in total) {
+        //console.log(total[k], k, '=-=-=-=-=-=- ', this.state.adj[total[k]])
+        console.log('For ', k, ' this dog and you were ', this.state.adj[total[k]])
+      };
+
+      let { name, photos, gender, size, age, breeds } = this.props.dogInfo
 
       str = <div>
         <div className='dogName'>
-          <img src={this.props.dogInfo.photos[0].small} />
-          <h1>{this.props.dogInfo.name}</h1>
+          <img src={photos[0].small} />
+          <h1>{name}</h1>
         </div>
         <div>
-          <p>{this.props.dogInfo.gender}</p>
-          <p>{this.props.dogInfo.size}</p>
-          <p>{this.props.dogInfo.age}</p>
-          <p>{this.props.dogInfo.breeds.primary}</p>
+          <p>{gender}</p>
+          <p>{size}</p>
+          <p>{age}</p>
+          <p>{breeds.primary}</p>
         </div>
       </div>
 
@@ -41,6 +51,7 @@ class DogDetails extends Component {
 
 
   render() {
+
     console.log(this.props);
     return (
       <div>
