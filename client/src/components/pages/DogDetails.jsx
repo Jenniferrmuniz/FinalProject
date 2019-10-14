@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 class DogDetails extends Component {
 
   state = {
-    adj: ['great', 'good', 'meh', 'stinky', 'terrible']
+    adj: ['great', 'good', 'meh', 'stinky', 'terrible'],
+    toggleContact: false
   }
 
   getInfo = () => {
@@ -29,6 +30,7 @@ class DogDetails extends Component {
           <p>{age}</p>
           <p>{breeds.primary}</p>
         </div>
+        <button className='contact-btn' onClick={() => { this.setState({ toggleContact: true }) }}>Contact</button>
       </div>
 
       // for(let i=0; i<this.props.dogInfo.attributes.length; i++){
@@ -42,17 +44,11 @@ class DogDetails extends Component {
   }
 
 
-  contactInfo = () => {
-    if (this.props.dogInfo) {
-      return <button>Contact</button>
-    }
-  }
 
 
   contact = () => {
-    if (this.props.dogInfo) {
+    if (this.state.toggleContact) {
       return <div>
-        <h1>NODEMAILER</h1>
         <form action="/send-email" method="post">
           <label htmlFor="">Email</label>
           <input type="email" name="email" id="" value={this.props.dogInfo.contact.email} />
@@ -75,7 +71,6 @@ class DogDetails extends Component {
       <div>
         {this.getInfo()}
         {/* {this.getBreedInfo()} */}
-        {this.contactInfo()}
         {this.contact()}
       </div>
     )

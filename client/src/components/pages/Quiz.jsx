@@ -134,7 +134,7 @@ class Quiz extends Component {
   render() {
     return (
       <div className='quizPage'>
-        <form >
+        <form onSubmit={this.handleSubmit}>
         {this.questionBank(this.state.nextQ)}
         {/* <div>
             <h6>What City do you live in?</h6>

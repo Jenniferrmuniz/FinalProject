@@ -5,13 +5,11 @@ import Axios from '../../../../server/node_modules/axios'
 
 class Matches extends Component {
 
-
   state = {
     user: {
       preferences: {}
     }
   }
-
 
 
   componentDidMount() {
@@ -23,6 +21,15 @@ class Matches extends Component {
 
 
   render() {
+
+    if(!this.state.user){
+      return <p>You need to log in and take the quiz to see your matches!</p>
+    }
+
+    if(!this.state.user.preferences){
+      return <p>You need to take the quiz to see your matches!</p>
+    }
+
 
     let { location, children, otherPets, age, size, active, affection, watchful, heat } = this.state.user.preferences
 
