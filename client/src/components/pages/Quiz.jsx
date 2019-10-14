@@ -116,11 +116,10 @@ class Quiz extends Component {
         <button type='button' name='heat' className={(this.state.heat === "3" ? 'selected' : '')} value='3' onClick={this.setForm}>Somewhere in the middle is perfect!</button>
         <button type='button' name='heat' className={(this.state.heat === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I love it when it is chilly</button>
         <button type='button' name='heat' className={(this.state.heat === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Cold sweater weather all the way!</button>
-        <button type='submit' >Submit Quiz</button>
+        <button type='submit' name='nextQ' >Submit Quiz</button>
       </div>
       //<button type='submit'>Submit Quiz</button>
     ]
-
 
     return questions[index];
   }
