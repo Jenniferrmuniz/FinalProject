@@ -32,6 +32,22 @@ body{
   }
 
 
+  .quizPage{
+
+
+    // button:active{
+    //   color:black;
+    // }
+
+    button:active{
+      color:black;
+    }
+
+
+
+  }
+
+
 
   .dogPage{
 
@@ -41,29 +57,55 @@ body{
 
     .dogListWrapper{
       margin: 50px;
+      height: 600px;
       display:flex;
       flex-direction: column;
+      overflow: scroll;
+
+      .eachDog{
+        background-color: #E9E9E9;
+        width: 250px;
+        height: 100px;
+        margin: 15px;
+        text-decoration: none;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        p{
+          font-family: "Papyrus";
+          color: black;
+        }
+
+        img{
+          height: 50px;
+          width: auto;
+        }
+      }
     }
-
-    .eachDog{
-
+    .dogInfoWrapper{
       background-color: #E9E9E9;
-      width: 250px;
-      height: 100px;
-      margin: 15px;
-      display:flex;
-      justify-content: space-around;
-      align-items: center;
+      margin: 65px;
+      height: 550px;
+      width: 700px;
 
-      p{
-        font-family: "Papyrus";
+
+      .dogName{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        img{
+          height: 150px;
+          margin: 40px;
+        }
+        h1{
+          align-self: center;
+          justify-self: center;
+          margin-left: 50px;
+        }
       }
 
-      img{
-        height: 50px;
-        width: auto;
-      }
     }
-
   }
 }

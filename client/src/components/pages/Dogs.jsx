@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
-
+import DogDetails from './DogDetails'
 
 
 
@@ -65,7 +65,7 @@ class Dogs extends Component {
   showDogs = () => {
     let dogs = this.state.dogs.map((dog, i) => {
       return (
-        <Link to='/' key={i} className='eachDog'>
+        <Link to={'/all-dogs/' + dog.id} key={i} className='eachDog'>
           <p>{dog.name}</p>
           {dog.photos.length > 0 && <img src={dog.photos[0].medium} alt='dog pic' />}
         </Link>
@@ -76,35 +76,16 @@ class Dogs extends Component {
 
 
 
-  // getPreferences = () => {
-
-  //   let preferences = this.state.user.preferences;
-  //   let { location, children, otherPets, age, size, active, affection, watchful, heat } = this.state.user.preferences
-
-  //   console.log(location);
-
-  // }
 
 
-
-  getDogInfo = () => {
-    // console.log(this.state.dogs[0])
-    console.log(this.state.dogs);
-    //let dogName = this.state.dogs[0].name;
-
-    //return <p>{dogName}</p>
-  }
-
-
-
-
-  getDogById = () => {
+  getDogById = (id) => {
     for (let i = 0; i < this.state.dogs.length; i++) {
-      //if(this.state.dogs[i] === ){
-
-     // }
+      if (this.state.dogs[i].id == id) {
+        return this.state.dogs[i];
+      }
     }
   }
+
 
   render() {
     return (
@@ -114,18 +95,9 @@ class Dogs extends Component {
         </div>
 
         <div className='dogInfoWrapper'>
-          <p>dog name</p>
-          {this.getDogInfo()}
-
           <Switch>
-
-            <Route path="/all-dogs/:id" component={(props) => { }} />
-
+            <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} />} />
           </Switch>
-
-
-
-
         </div>
 
       </div>

@@ -20,6 +20,11 @@ class Quiz extends Component {
 
 
   setForm = (e) => {
+
+    console.log(e.target);
+    $(e.target).addClass("selected");
+
+
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -36,10 +41,12 @@ class Quiz extends Component {
 
 
 
+
+
   render() {
     // console.log(this.props)
     return (
-      <div>
+      <div className='quizPage'>
         Personallity quiz page!!!
         <form onSubmit={this.handleSubmit}>
 
@@ -121,6 +128,8 @@ class Quiz extends Component {
 
           <button type='submit'>Submit Quiz</button>
         </form>
+
+
       </div>
     )
   }
