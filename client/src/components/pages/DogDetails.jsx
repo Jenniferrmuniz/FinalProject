@@ -49,6 +49,24 @@ class DogDetails extends Component {
   }
 
 
+  contact = () => {
+    if (this.props.dogInfo) {
+      return <div>
+        <h1>NODEMAILER</h1>
+        <form action="/send-email" method="post">
+          <label htmlFor="">Email</label>
+          <input type="email" name="email" id="" value={this.props.dogInfo.contact.email} />
+          <label htmlFor="">Subject</label>
+          <input type="text" name="subject" id="" />
+          <label htmlFor="">Message</label>
+          <textarea type="text" name="message" id=""></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    }
+  }
+
+
 
   render() {
 
@@ -58,6 +76,7 @@ class DogDetails extends Component {
         {this.getInfo()}
         {/* {this.getBreedInfo()} */}
         {this.contactInfo()}
+        {this.contact()}
       </div>
     )
   }

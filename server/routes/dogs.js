@@ -163,6 +163,10 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 
 
+router.get('/send-email', (req, res, next) => {
+
+})
+
 
 
 

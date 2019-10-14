@@ -21,12 +21,12 @@ class Quiz extends Component {
 
 
   setForm = (e) => {
-    if(e.target.name === 'nextQ'){
+    if (e.target.name === 'nextQ') {
       this.setState({
         [e.target.name]: Number(e.target.value)
       })
     }
-    else{
+    else {
       this.setState({
         [e.target.name]: e.target.value
       })
@@ -116,7 +116,7 @@ class Quiz extends Component {
         <button type='button' name='heat' className={(this.state.heat === "3" ? 'selected' : '')} value='3' onClick={this.setForm}>Somewhere in the middle is perfect!</button>
         <button type='button' name='heat' className={(this.state.heat === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I love it when it is chilly</button>
         <button type='button' name='heat' className={(this.state.heat === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Cold sweater weather all the way!</button>
-        <button type='submit' name='nextQ' >Submit Quiz</button>
+        <button type='submit' name='nextQ' onClick={this.handleSubmit} >Submit Quiz</button>
       </div>
       //<button type='submit'>Submit Quiz</button>
     ]
@@ -134,9 +134,9 @@ class Quiz extends Component {
   render() {
     return (
       <div className='quizPage'>
-        <form onSubmit={this.handleSubmit}>
-          {this.questionBank(this.state.nextQ)}
-          {/* <div>
+        <form >
+        {this.questionBank(this.state.nextQ)}
+        {/* <div>
             <h6>What City do you live in?</h6>
             <input type='text' name='location' onChange={this.setForm} />
           </div>

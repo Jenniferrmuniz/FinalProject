@@ -23,7 +23,7 @@ export default class Signup extends Component {
     e.preventDefault()
     let data = {
       username: this.state.username,
-      name: this.state.name,
+      email: this.state.email,
       password: this.state.password,
     }
     api
@@ -42,34 +42,17 @@ export default class Signup extends Component {
         <h2>Signup</h2>
         <form>
           Username:{' '}
-          <input
-            type="text"
-            value={this.state.username}
-            name="username"
-            onChange={this.handleInputChange}
-          />{' '}
+          <input type="text" value={this.state.username} name="username" onChange={this.handleInputChange} />{' '}
           <br />
-          Name:{' '}
-          <input
-            type="text"
-            value={this.state.name}
-            name="name"
-            onChange={this.handleInputChange}
-          />{' '}
+          Email:{' '}
+          <input type="email" value={this.state.email} name="email" onChange={this.handleInputChange} />{' '}
           <br />
           Password:{' '}
-          <input
-            type="password"
-            value={this.state.password}
-            name="password"
-            onChange={this.handleInputChange}
-          />{' '}
+          <input type="password" value={this.state.password} name="password" onChange={this.handleInputChange} />{' '}
           <br />
           <button onClick={e => this.handleClick(e)}>Signup</button>
         </form>
-        {this.state.message && (
-          <div className="info info-danger">{this.state.message}</div>
-        )}
+        {this.state.message && (<div className="info info-danger">{this.state.message}</div>)}
       </div>
     )
   }
