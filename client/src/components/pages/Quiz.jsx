@@ -53,12 +53,14 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>Do you have any children living with you?</h6>
         <button type='button' name='children' className={(this.state.children === "false" ? 'selected' : '')} value='false' onClick={this.setForm}>No children</button>
         <button type='button' name='children' className={(this.state.children === "true" ? 'selected' : '')} value='true' onClick={this.setForm}>Children</button>
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>Do you have any other pets?</h6>
         <button type='button' name='otherPets' className={(this.state.otherPets === "none" ? 'selected' : '')} value='none' onClick={this.setForm}>No other pets</button>
         <button type='button' name='otherPets' className={(this.state.otherPets === "dogs" ? 'selected' : '')} value='dogs' onClick={this.setForm}>Dogs</button>
@@ -67,6 +69,7 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>What age are you looking to adopt? <p>(Don't forget, the younger they are the more work and energy they require!)</p></h6>
         <button type='button' name='age' className={(this.state.age === "baby" ? 'selected' : '')} value='baby' onClick={this.setForm}>Puppy</button>
         <button type='button' name='age' className={(this.state.age === "young" ? 'selected' : '')} value='young' onClick={this.setForm}> Young</button>
@@ -75,6 +78,7 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>What size dogs do you prefer?</h6>
         <button type='button' name='size' className={(this.state.size === "small" ? 'selected' : '')} value='small' onClick={this.setForm}>Small dogs</button>
         <button type='button' name='size' className={(this.state.size === "medium" ? 'selected' : '')} value='medium' onClick={this.setForm}>Medium dogs</button>
@@ -83,6 +87,7 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>How active do you consider yourself?</h6>
         <button type='button' name='active' className={(this.state.active === "10" ? 'selected' : '')} value='10' onClick={this.setForm}>Extremely active, I love exercising and being out and about!</button>
         <button type='button' name='active' className={(this.state.active === "8" ? 'selected' : '')} value='8' onClick={this.setForm}>Very active, I definitely have a lot of energy.</button>
@@ -92,6 +97,7 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>Do you enjoy getting affection?</h6>
         <button type='button' name='affection' className={(this.state.affection === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Very much, I want affection all the time!</button>
         <button type='button' name='affection' className={(this.state.affection === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I definitely love getting affection.</button>
@@ -101,6 +107,7 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>Are you looking for a dog that will keep you safe?</h6>
         <button type='button' name='watchful' className={(this.state.watchful === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Yes! I would love a tough guard dog.</button>
         <button type='button' name='watchful' className={(this.state.watchful === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I don't necessarily want a guard dog but I'd prefer a tougher dog that will keep an eye out.</button>
@@ -110,16 +117,18 @@ class Quiz extends Component {
         <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm}>Next question</button>
       </div>,
       <div>
+
         <h6>Do you prefer being out in the heat or the cold?</h6>
         <button type='button' name='heat' className={(this.state.heat === "1" ? 'selected' : '')} value='1' onClick={this.setForm}>I love the heat!</button>
         <button type='button' name='heat' className={(this.state.heat === "2" ? 'selected' : '')} value='2' onClick={this.setForm}>I like it hot, but not too much</button>
         <button type='button' name='heat' className={(this.state.heat === "3" ? 'selected' : '')} value='3' onClick={this.setForm}>Somewhere in the middle is perfect!</button>
         <button type='button' name='heat' className={(this.state.heat === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I love it when it is chilly</button>
         <button type='button' name='heat' className={(this.state.heat === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Cold sweater weather all the way!</button>
-        <button type='submit' name='nextQ' onClick={this.handleSubmit} >Submit Quiz</button>
+        <button type='submit' name='nextQ'>Submit Quiz</button>
       </div>
       //<button type='submit'>Submit Quiz</button>
     ]
+    console.log(questions[8]);
 
     return questions[index];
   }
@@ -135,8 +144,8 @@ class Quiz extends Component {
     return (
       <div className='quizPage'>
         <form onSubmit={this.handleSubmit}>
-        {this.questionBank(this.state.nextQ)}
-        {/* <div>
+          {this.questionBank(this.state.nextQ)}
+          {/* <div>
             <h6>What City do you live in?</h6>
             <input type='text' name='location' onChange={this.setForm} />
           </div>
