@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from '../../../../server/node_modules/axios'
-
+import baseURL from '../../config'
 
 
 class Matches extends Component {
@@ -13,7 +13,7 @@ class Matches extends Component {
 
 
   componentDidMount() {
-    Axios.get('http://localhost:5000/api/user', { withCredentials: true }).then(result => {
+    Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
       let currentUser = result.data
       this.setState({ user: currentUser })
     })

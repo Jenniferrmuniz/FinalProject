@@ -3,8 +3,8 @@ import axios from 'axios'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import DogDetails from './DogDetails'
 import NoneSelected from './NoneSelected'
-
-
+import baseURL from '../../config'
+console.log(baseURL)
 
 class Dogs extends Component {
   state = {
@@ -43,12 +43,12 @@ class Dogs extends Component {
 
   componentDidMount() {
 
-    axios.get('http://localhost:5000/api/user', { withCredentials: true }).then(result => {
+    axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
       let currentUser = result.data
       this.setState({ user: currentUser })
     })
 
-    axios.get('http://localhost:5000/api/all-dogs', { withCredentials: true }).then(res => {
+    axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
 
       console.log(res.data);
       let list = res.data.filtered.map((animal, i) => {
@@ -67,7 +67,7 @@ class Dogs extends Component {
     let dogs = this.state.dogs.map((dog, i) => {
       return (
         <Link to={'/all-dogs/' + dog.id} key={i} className='eachDog'>
-          <p>{i+1}. {dog.name}</p>
+          <p>{i + 1}. {dog.name}</p>
           {dog.photos.length > 0 && <img src={dog.photos[0].medium} alt='dog pic' />}
         </Link>
       )

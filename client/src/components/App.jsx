@@ -8,6 +8,7 @@ import Dogs from './pages/Dogs'
 import Quiz from './pages/Quiz'
 import Matches from './pages/Matches'
 import Axios from '../../../server/node_modules/axios'
+import baseURL from '../../config'
 
 export default class App extends Component {
 
@@ -38,7 +39,7 @@ export default class App extends Component {
 
 
   isLoggedIn = () => {
-    Axios.get('http://localhost:5000/api/user', { withCredentials: true }).then(result => {
+    Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
       // console.log(result)
       let user = result.data
       // console.log(user)

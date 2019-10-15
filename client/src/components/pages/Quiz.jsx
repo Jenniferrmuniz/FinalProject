@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from '../../../../server/node_modules/axios'
-
+import baseURL from '../../config'
 
 
 
@@ -39,7 +39,7 @@ class Quiz extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.answers(this.state);
-    Axios.post('http://localhost:5000/api/savequiz', this.state, { withCredentials: true }).then(res => {
+    Axios.post(`${baseURL}/api/savequiz`, this.state, { withCredentials: true }).then(res => {
       this.props.history.push('/matches');
     })
   }
