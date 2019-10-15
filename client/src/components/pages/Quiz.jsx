@@ -41,7 +41,7 @@ class Quiz extends Component {
     this.props.answers(this.state);
     Axios.post(`${baseURL}/api/savequiz`, this.state, { withCredentials: true }).then(res => {
       this.props.history.push('/matches');
-    })
+    }).catch(err => console.error(err))
   }
 
 
@@ -124,7 +124,7 @@ class Quiz extends Component {
         <button type='button' name='heat' className={(this.state.heat === "3" ? 'selected' : '')} value='3' onClick={this.setForm}>Somewhere in the middle is perfect!</button>
         <button type='button' name='heat' className={(this.state.heat === "4" ? 'selected' : '')} value='4' onClick={this.setForm}>I love it when it is chilly</button>
         <button type='button' name='heat' className={(this.state.heat === "5" ? 'selected' : '')} value='5' onClick={this.setForm}>Cold sweater weather all the way!</button>
-        <button type='submit' name='nextQ'>Submit Quiz</button>
+        <button type='submit' onClick={this.handleSubmit} name='nextQ'>Submit Quiz</button>
       </div>
       //<button type='submit'>Submit Quiz</button>
     ]
@@ -143,7 +143,7 @@ class Quiz extends Component {
   render() {
     return (
       <div className='quizPage'>
-        <form onSubmit={this.handleSubmit}>
+        {/* <form onSubmit={this.handleSubmit}> */}
           {this.questionBank(this.state.nextQ)}
           {/* <div>
             <h6>What City do you live in?</h6>
@@ -219,7 +219,7 @@ class Quiz extends Component {
           </div>
 
           <button type='submit'>Submit Quiz</button> */}
-        </form>
+        {/* </form> */}
 
 
       </div>

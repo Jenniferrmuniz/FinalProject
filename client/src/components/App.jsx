@@ -26,8 +26,10 @@ export default class App extends Component {
 
 
   setPreferences = (preferences) => {
+    let user = { ...this.state.user }
+    user.preferences = preferences
     this.setState({
-      user: preferences
+      user
     })
   }
 
