@@ -7,18 +7,58 @@ export default class Home extends Component {
 
   showHome = () => {
     if (this.props.info.username) {
-      return <div>
-        <p>Logged in</p>
+      let homeLink;
+      if (this.props.info.preferences) {
+        homeLink = <div className='preferences-true'>
+          <div className='matches-div'>
+            <div className='bestMatch-div'>
+              <div>
+
+              </div>
+              <p>Your Best Match:</p>
+              <div>
+              <Link to="/all-dogs">
+                <img src='' alt='best matched dog' />
+                <p>best matched dog name goes here</p>
+              </Link>
+              </div>
+
+            </div>
+            <div className='matchesLink'>
+              <Link className='theLink' to="/all-dogs">See all matches</Link>
+            </div>
+            <div className='matchesLink'>
+              <Link className='theLink' to="/quiz">Take Quiz Again</Link>
+            </div>
+          </div>
+
+          <div>
+            <p>Something else goes here</p>
+          </div>
+
+
+
+        </div>
+      }
+      else {
+        homeLink = <div className='preferences-false'>
+          <p>Want to find your best matches from adoptable dogs near you?</p>
+          <Link to="/quiz">Take Quiz</Link>
+        </div>
+
+      }
+
+
+      console.log(this.props);
+      return <div className='home-loggedIn'>
+
         <p>Welcome {this.props.info.username}</p>
-        <p>Best match:</p>
-        <img />
-        <p>See all of your matches!</p>
+        {homeLink}
 
       </div>
     }
     else {
-      return <div>
-        <p>Not logged in</p>
+      return <div className='home-loggedOut'>
         <Link to='/signup'>Get Started</Link>
         <p>Already have an account? <Link to='/login'>Log in</Link></p>
       </div>
@@ -30,8 +70,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="Home">
-        <h2>Home</h2>
+      <div className="homePage">
         {this.showHome()}
       </div>
     )

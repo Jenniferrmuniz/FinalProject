@@ -8,7 +8,7 @@ const axios = require('axios')
 const Breed = require('../models/Breed')
 const { isLoggedIn } = require('../middlewares')
 const breeds = require('../bin/breeds')
-
+const nodemailer = require('nodemailer')
 // Route to get dogs from API
 
 // router.get('/', (req, res, next) => {
@@ -163,11 +163,30 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 
 
-router.get('/send-email', (req, res, next) => {
 
-})
+router.post('/send-email', (req, res, next) => {
 
+  let transporter = nodemailer.createTransport({
+    service: EMAIL_SERVICE,
+    auth: {
+      user: MY_EMAIL,
+      pass: MY_PASSWORD
+    }
+  });
 
+  let { toEmail, fromEmail, subject, message } = req.body;
+
+  transporter.sendMail({
+    from: fromEmail,
+    to: toEmail,
+    subject: subject,
+    text: message,
+    html: `<b>${message}</b>`
+  })
+    .then(info => console.log(info))
+    .catch(error => console.log(error))
+   res.render('message', { toEmail, subject, message, info })
+});
 
 
 

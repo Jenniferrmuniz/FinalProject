@@ -4,7 +4,7 @@ import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import DogDetails from './DogDetails'
 import NoneSelected from './NoneSelected'
 import baseURL from '../../config'
-console.log(baseURL)
+
 
 class Dogs extends Component {
   state = {
@@ -95,10 +95,10 @@ class Dogs extends Component {
           {this.showDogs()}
         </div>
 
-        <div className='dogInfoWrapper'>
+        <div className='dogDetailsWrapper'>
           <Switch>
             <Route exact path="/all-dogs" component={(props) => <NoneSelected />} />
-            <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} />} />
+            <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} theUser={this.state.user} />} />
           </Switch>
         </div>
 

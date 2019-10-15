@@ -8,7 +8,8 @@
 
 
 body{
-  background-color: #CDCDCD;
+  // background-color: #CDCDCD;
+  background-image: url('/gray-background.jpg');
   margin: 0px;
   font-family: "Andale Mono";
 
@@ -32,17 +33,135 @@ body{
   }
 
 
-  .quizPage{
 
+  .homePage{
+    padding: 50px;
+    
 
-    // button:active{
-    //   color:black;
-    // }
+    .home-loggedOut{
 
-    button:active{
-      color:black;
     }
 
+
+    .home-loggedIn{
+
+
+
+      .preferences-true{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .matches-div{
+          width:500px;
+          height: 350px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-around;
+          .bestMatch-div{
+            height: 70%;
+            display:flex;
+            flex-direction:row;
+            justify-content: space-around;
+          }
+          .matchesLink{
+            background-color: rgba(233, 233, 233, .3);
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 3px solid #88BBD6;
+            margin: 15px;
+            text-align: center;
+
+            .theLink{
+              font-family: "Andale Mono";
+              text-decoration: none;
+              color:black;
+            }
+            .theLink:hover{
+              
+            }
+          }
+        }
+      }
+
+      .preferences-false{
+
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .quizPage{
+    height: 60vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .question-div{
+      border: 2px solid red;
+      width: 50%;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .question{
+        font-size: 40px;
+        font-family: "Papyrus";
+      }
+
+      .quiz-options{
+        display:flex;
+        flex-direction: column;
+        button{
+          font-family: "Andale Mono";
+          padding: 15px 30px;
+          border-radius: 30px;
+          margin: 5px;
+          transition: all .2s;
+          outline:none;
+        }
+        button:active{
+          background:none;
+        }
+        .selected{
+          background:#88BBD6;
+        }
+      }
+
+      .next-div{
+        button{
+          font-family: "Andale Mono";
+          padding: 15px 30px;
+          border-radius: 30px;
+          border: 3px solid #88BBD6;
+          margin: 30px;
+          outline:none;
+        }
+
+        
+      }
+
+
+    }
 
 
   }
@@ -60,10 +179,12 @@ body{
       height: 600px;
       display:flex;
       flex-direction: column;
-      overflow: scroll;
+      overflow-y: scroll;
 
       .eachDog{
-        background-color: #E9E9E9;
+        // background-color: #E9E9E9;
+        background-color: rgba(233, 233, 233, .3);
+        border: 2px inset #99D3DF;
         width: 250px;
         height: 100px;
         margin: 15px;
@@ -84,6 +205,131 @@ body{
         }
       }
     }
+
+    
+
+    .dogDetailsWrapper{
+      padding:0;
+
+
+
+      .infoWrapper{
+        // background-color: #E9E9E9;
+        //background-color: rgba(233, 233, 233, .3);
+        //border: 2px inset #99D3DF;
+        margin: 65px;
+        height: 550px;
+        width: 700px;
+        
+        .dogName{
+          display:flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          img{
+            height: 200px;
+            margin: 10px;
+          }
+          h1{
+            font-family: "Papyrus";
+            margin-left: 100px;
+          }
+        }
+        .contact-btn{
+          font-family: "Papyrus";
+          outline:none;
+          color: white;
+          background-color: #88BBD6;
+          border: 2px solid #99D3DF;
+          padding: 10px 15px;
+        }
+      }
+
+
+
+      .emailWrapper{
+        z-index: 10;
+        position: fixed;
+        display:none;
+        width: 500px;
+        height: 300px;
+        padding: 20px;
+        background-color: #88BBD6;
+        left: 0;
+        top: 0;
+
+        .closeEmailWrapper{
+          float: right;
+          background:none;
+        }
+
+        .send-email{
+          width: 100%;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+  
+          .email-div{
+            margin: 5px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+  
+            div{
+              margin: 15px;
+            }
+          }
+
+          .message-div, .subject-div{
+            width: 100%;
+            margin: 10px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            input{
+              margin: 5px;
+              width: 80%;
+            }
+            textarea{
+              margin: 5px;
+              width: 80%;
+              height: 100px;
+            }
+          }
+          .btn-div{
+            width:100%;
+            margin-top: 10px;
+            display:flex;
+            justify-content: center;
+            button{
+              width: 40%;
+            }
+          }
+        }
+        
+
+
+
+
+
+      }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
     .dogInfoWrapper{
       background-color: #E9E9E9;
       margin: 65px;
@@ -105,22 +351,73 @@ body{
           margin-left: 50px;
         }
       }
+      .contact-btn{
+        color: white;
+        background-color: #88BBD6;
+        border: 2px solid #99D3DF;
+        padding: 10px 15px;
+      }
+
+      .send-email{
+        width: 100%;
+        margin: 5px;
+        border: 1px solid blue;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .email-div{
+          margin: 5px;
+          display:flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          div{
+            margin: 5px;
+          }
+        }
+      //   .subject-div{
+      //     width: 100%;
+      //     margin: 5px;
+      //     border: 1px solid blue;
+      //     input{
+      //       width: 80%;
+      //   }
+      // }
+        .message-div, .subject-div{
+          width: 100%;
+          margin: 5px;
+          border: 1px solid blue;
+          display:flex;
+          flex-direction: row;
+          align-items: center;
+          input{
+            margin: 5px;
+            width: 80%;
+          }
+          textarea{
+            margin: 5px;
+            width: 80%;
+            height: 100px;
+          }
+        }
+        .btn-div{
+          width:100%;
+          display:flex;
+          justify-content: center;
+          button{
+            width: 40%;
+          }
+        }
+      }
+
+
+
+
 
     }
   }
 }
 
 
-button:active{
-   background:none;
-}
-button {
-  padding: 20px;
-  transition: all .2s;
-}
-button{
-  outline:none;
-}
-.selected{
-  background:#88BBD6;
-}
