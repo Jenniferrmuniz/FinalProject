@@ -109,7 +109,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     }
     return 0;
   });
-  //breedScores = breedMatches
+  
   let filtered = sortAnimals();
 
 
@@ -141,21 +141,22 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     let totalHeat = Math.abs(Number(breedInfo.heatSensitivity) - Number(user.preferences.heat));
 
 
-    let total = {
+    let breedLevels = {
       name: breedInfo.name,
-      totalActive,
-      totalAffection,
-      totalWatchful,
-      totalHeat,
+      energy: breedInfo.energy,
+      exercise: breedInfo.exercise,
+      affection: breedInfo.affection,
+      watchful: breedInfo.watchfulness,
+      heat: breedInfo.heatSensitivity,
       score: totalActive + totalAffection + totalWatchful + totalHeat
     }
 
-    return total;
+    return breedLevels;
   }
 
   console.log(filtered);
 
-  res.json({ filtered, somethin: 'else' });
+  res.json(filtered);
 
 })
 

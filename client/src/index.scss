@@ -240,22 +240,64 @@ body{
         box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
 
         
-        .dogName{
+        .details{
+          height: 100%;
+          width: 100%;
           display:flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          img{
-            height: 200px;
-            margin: 10px;
-            border: 4px ridge #88BBD6;
+
+          .dogName{
+            width:650px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            img{
+              height: 200px;
+              margin: 10px 10px;
+              border: 4px ridge #88BBD6;
+            }
+            h1{
+              font-family: 'Marck Script', cursive;
+              font-size: 48px;
+              margin: 10px, 80px;
+            }
           }
-          h1{
-            font-family: 'Marck Script', cursive;
-            font-size: 48px;
-            margin: 10px, 90px;
+
+          .info-div{
+            width: 650px;
+            font-size: 20px;
+            display:flex;
+            flex-direction:row;
+            justify-content: space-around;
+            align-items: center;
+
+            .dogDetailsInfo{
+              height: 200px;
+              display:flex;
+              flex-direction: column;
+              justify-content: space-around;
+            }
+
+
+            .breedDetails{
+              
+              span{
+                font-size: 12px;
+              }
+
+              .progress-bar{
+                width: 25%;
+              }
+            }
           }
+
+
+
         }
+
 
         .contact-btn{
           font-family: 'Marck Script', cursive;
