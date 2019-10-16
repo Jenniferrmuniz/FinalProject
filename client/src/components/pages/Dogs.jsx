@@ -50,13 +50,15 @@ class Dogs extends Component {
 
     axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
 
-      console.log(res.data);
+      //console.log(res.data);
       let list = res.data.filtered.map((animal, i) => {
         return (animal);
       })
       this.setState({
         dogs: list
       })
+      //console.log('LIST[0] ======== ', list[0]);
+      //this.props.topMatch(list[0]);
     })
 
   }

@@ -13,7 +13,8 @@ import baseURL from '../config'
 export default class App extends Component {
 
   state = {
-    user: {}
+    user: {},
+    topMatch: {}
   }
 
   handleLogoutClick(e) {
@@ -51,6 +52,12 @@ export default class App extends Component {
     })
   }
 
+
+  setTopMatch = (dog) => {
+    this.setState({ topMatch: dog });
+    console.log('HOME STATE === ', this.state);
+  }
+
   showNav = () => {
     if (this.state.user.username) {
       return (
@@ -81,22 +88,16 @@ export default class App extends Component {
         <header className="App-header">
           <NavLink className='navlink' to="/" exact>Home {this.state.user.username}</NavLink>
 
-          {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-          {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-          {api.isLoggedIn() && (<Link to="/" onClick={e => this.handleLogoutClick(e)}>Logout</Link>)}
-
-          {api.isLoggedIn() && <NavLink to="/secret">Secret</NavLink>} */}
-
           {this.showNav()}
 
         </header>
 
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
-          <Route path="/" exact component={(props) => <Home info={this.state.user} {...props} />} />
+          <Route path="/" exact component={(props) => <Home info={this.state.user} topMatch={this.state.topMatch} {...props} />} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
-          <Route path="/all-dogs" component={Dogs} />
+          <Route path="/all-dogs" component={(props) => <Dogs topMatch={this.setTopMatch} {...props} />} />
           <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />

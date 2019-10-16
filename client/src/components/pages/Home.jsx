@@ -6,6 +6,7 @@ export default class Home extends Component {
 
 
   showHome = () => {
+    // console.log('%%%%%%%%%%% ', this.props.topMatch);
     if (this.props.info.username) {
       let homeLink;
       if (this.props.info.preferences) {
@@ -17,10 +18,10 @@ export default class Home extends Component {
               </div>
               <p>Your Best Match:</p>
               <div>
-              <Link to="/all-dogs">
-                <img src='' alt='best matched dog' />
-                <p>best matched dog name goes here</p>
-              </Link>
+                <Link to="/all-dogs">
+                  {/* <img src={this.props.topMatch.photos[0].small} alt='best matched dog' /> */}
+                  <p>{this.props.topMatch.name}</p>
+                </Link>
               </div>
 
             </div>
