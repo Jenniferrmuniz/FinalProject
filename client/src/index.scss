@@ -252,7 +252,7 @@ body{
             width:650px;
             display:flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
             img{
               height: 200px;
@@ -261,8 +261,9 @@ body{
             }
             h1{
               font-family: 'Marck Script', cursive;
-              font-size: 48px;
-              margin: 10px, 80px;
+              font-size: 55px;
+              margin: 10px;
+              margin-left: 100px;
             }
           }
 
@@ -275,22 +276,44 @@ body{
             align-items: center;
 
             .dogDetailsInfo{
-              height: 200px;
+              width:30%;
+              height: 220px;
               display:flex;
               flex-direction: column;
               justify-content: space-around;
+
+              .contact-btn{
+                font-family: 'Marck Script', cursive;
+                font-size:16px;
+                outline:none;
+                color: white;
+                background-color: #88BBD6;
+                border: 2px solid #99D3DF;
+                border-radius: 30px;
+                padding: 5px 70px;
+                margin-top: 10px;
+              }
             }
 
 
             .breedDetails{
-              
+              margin-left: 30px;
+              width: 55%;
+
               span{
                 font-size: 12px;
               }
 
-              .progress-bar{
-                width: 25%;
+              .progress{
+                height: 10px;
+                width: 70%;
+
+                .progress-bar{
+                  width: 25%;
+                }
               }
+
+
             }
           }
 
@@ -298,17 +321,6 @@ body{
 
         }
 
-
-        .contact-btn{
-          font-family: 'Marck Script', cursive;
-          font-size:16px;
-          outline:none;
-          color: white;
-          background-color: #88BBD6;
-          border: 2px solid #99D3DF;
-          border-radius: 30px;
-          padding: 15px 20px;
-        }
       }
 
 

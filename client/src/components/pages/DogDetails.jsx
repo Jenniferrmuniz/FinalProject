@@ -24,6 +24,7 @@ class DogDetails extends Component {
       console.log(this.props.dogInfo)
 
       let progressBar;
+      let levels;
       for (let key in total) {
 
         console.log(key, total[key]);
@@ -46,6 +47,13 @@ class DogDetails extends Component {
             break;
         }
 
+
+        levels = <div>
+          <span>{key}</span>
+          <div className="progress">
+            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
         console.log(progressBar);
 
       }
@@ -57,39 +65,22 @@ class DogDetails extends Component {
 
 
       let breedDetails;
+      let breedNames;
       if (breeds.secondary) {
-        breedDetails = <div className='breedDetails'>
-          <p>{breeds.primary} and {breeds.secondary}</p>
-
-          <span>Energy</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Exercise</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Affection</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Watchfulness</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Heat Sensitivity</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-
+        breedNames = <p>{breeds.primary} and {breeds.secondary}</p>
       }
       else {
-        console.log('here!')
-        breedDetails = <div className='breedDetails'>
-          <p>{breeds.primary}</p>
+        breedNames = <p>{breeds.primary}</p>
+      }
 
-          <span>Energy</span>
+
+
+
+      breedDetails = <div className='breedDetails'>
+
+        {breedNames}
+        {/* {levels} */}
+        <span>Energy</span>
           <div className="progress">
             <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
@@ -109,8 +100,11 @@ class DogDetails extends Component {
           <div className="progress">
             <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-        </div>
-      }
+
+
+      </div>
+
+
 
 
 
@@ -126,12 +120,12 @@ class DogDetails extends Component {
               <p>Gender: {gender}</p>
               <p>Size: {size}</p>
               <p>Age: {age}</p>
+              <button className='contact-btn' onClick={() => { this.setState({ toggleContact: true }) }}>Contact</button>
             </div>
             {breedDetails}
           </div>
 
         </div>
-        <button className='contact-btn' onClick={() => { this.setState({ toggleContact: true }) }}>Contact</button>
       </div>
 
     }
