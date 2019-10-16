@@ -22,11 +22,19 @@ body{
     display: flex;
     justify-content: space-around;
 
+    .pet-harmony-logo{
+      h3{
+        font-size: 30px;
+        color:white;
+        font-family: 'Marck Script', cursive;
+      }
+    }
+
     .navlink{
       color: white;
       text-decoration: none;
-      font-family: 'Marck Script', cursive;
-      font-size: 24px;
+      font-family: 'Baumans', cursive;
+      font-size: 18px;
       padding: 20px;
     }
     .navlink:hover{

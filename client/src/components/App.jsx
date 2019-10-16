@@ -99,7 +99,7 @@ export default class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <div>
+          <div className='pet-harmony-logo'>
             <img src='' />
             <h3>Pet Harmony</h3>
           </div>
