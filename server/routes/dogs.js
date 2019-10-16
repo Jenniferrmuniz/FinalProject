@@ -109,7 +109,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     }
     return 0;
   });
-  
+
   let filtered = sortAnimals();
 
 
@@ -167,6 +167,10 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 router.post('/send-email', (req, res, next) => {
 
+  let { EMAIL_SERVICE, MY_EMAIL, MY_PASSWORD } = process.env
+
+  console.log(req.body, 'send email')
+
   let transporter = nodemailer.createTransport({
     service: EMAIL_SERVICE,
     auth: {
@@ -178,15 +182,18 @@ router.post('/send-email', (req, res, next) => {
   let { toEmail, fromEmail, subject, message } = req.body;
 
   transporter.sendMail({
-    from: fromEmail,
-    to: toEmail,
+    from: '"My Awesome Project 👻" <>',
+    to: '',
     subject: subject,
     text: message,
     html: `<b>${message}</b>`
   })
-    .then(info => console.log(info))
+    .then(info => {
+      console.log(info, '][][][][][')
+      res.render('message', { info })
+
+    })
     .catch(error => console.log(error))
-   res.render('message', { toEmail, subject, message, info })
 });
 
 

@@ -48,25 +48,27 @@ class Dogs extends Component {
       this.setState({ user: currentUser })
     })
 
-    axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
 
-      //console.log(res.data);
-      let list = res.data.map((animal, i) => {
-        return (animal);
-      })
-      this.setState({
-        dogs: list
-      })
-      //console.log('LIST[0] ======== ', list[0]);
-      //this.props.topMatch(list[0]);
-    })
+    //this.props.getMatchingDogs()
+    // axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
+
+    //   //console.log(res.data);
+    //   let list = res.data.map((animal, i) => {
+    //     return (animal);
+    //   })
+    //   this.setState({
+    //     dogs: list
+    //   })
+    //   //console.log('LIST[0] ======== ', list[0]);
+    //   //this.props.topMatch(list[0]);
+    // })
 
   }
 
 
 
   showDogs = () => {
-    let dogs = this.state.dogs.map((dog, i) => {
+    let dogs = this.props.dogs.map((dog, i) => {
       return (
         <Link to={'/all-dogs/' + dog.id} key={i} className='eachDog'>
           <p>{i + 1}. {dog.name}</p>
@@ -82,9 +84,9 @@ class Dogs extends Component {
 
 
   getDogById = (id) => {
-    for (let i = 0; i < this.state.dogs.length; i++) {
-      if (this.state.dogs[i].id == id) {
-        return this.state.dogs[i];
+    for (let i = 0; i < this.props.dogs.length; i++) {
+      if (this.props.dogs[i].id == id) {
+        return this.props.dogs[i];
       }
     }
   }
@@ -100,7 +102,7 @@ class Dogs extends Component {
         <div className='dogDetailsWrapper'>
           <Switch>
             <Route exact path="/all-dogs" component={(props) => <NoneSelected />} />
-            <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} theUser={this.state.user} />} />
+            <Route exact path="/all-dogs/:id" component={(props) => <DogDetails dogInfo={this.getDogById(props.match.params.id)} theUser={this.props.user} />} />
           </Switch>
         </div>
 

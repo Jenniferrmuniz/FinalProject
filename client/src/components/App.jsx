@@ -10,11 +10,12 @@ import Matches from './pages/Matches'
 import Axios from '../../../server/node_modules/axios'
 import baseURL from '../config'
 
-export default class App extends Component {
 
+export default class App extends Component {
   state = {
     user: {},
-    topMatch: {}
+    topMatch: { photos: [{ small: './../../public/loading.gif' }] },
+    dogs: []
   }
 
   handleLogoutClick(e) {
@@ -38,6 +39,7 @@ export default class App extends Component {
   componentDidMount() {
     // console.log('fetch the user once')
     this.isLoggedIn()
+    this.getMatchingDogs()
   }
 
 
@@ -53,9 +55,20 @@ export default class App extends Component {
   }
 
 
-  setTopMatch = (dog) => {
-    this.setState({ topMatch: dog });
-    console.log('HOME STATE === ', this.state);
+  getMatchingDogs = () => {
+    Axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
+
+      //console.log(res.data);
+      let list = res.data.map((animal, i) => {
+        return (animal);
+      })
+      this.setState({
+        dogs: list,
+        topMatch: list[0]
+      })
+      //console.log('LIST[0] ======== ', list[0]);
+      //this.props.topMatch(list[0]);
+    })
   }
 
   showNav = () => {
@@ -86,7 +99,12 @@ export default class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <NavLink className='navlink' to="/" exact>Home {this.state.user.username}</NavLink>
+          <div>
+            <img src='' />
+            <h3>Pet Harmony</h3>
+          </div>
+
+          <NavLink className='navlink' to="/" exact>Home</NavLink>
 
           {this.showNav()}
 
@@ -97,7 +115,7 @@ export default class App extends Component {
           <Route path="/" exact component={(props) => <Home info={this.state.user} topMatch={this.state.topMatch} {...props} />} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
           <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
-          <Route path="/all-dogs" component={(props) => <Dogs topMatch={this.setTopMatch} {...props} />} />
+          <Route path="/all-dogs" component={(props) => <Dogs getMatchingDogs={this.getMatchingDogs} dogs={this.state.dogs} {...props} />} />
           <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />

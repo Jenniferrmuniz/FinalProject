@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Link, NavLink, Switch } from 'react-router-dom'
 
 
+
 export default class Home extends Component {
 
 
@@ -18,8 +19,8 @@ export default class Home extends Component {
               </div>
               <p>Your Best Match:</p>
               <div>
-                <Link to="/all-dogs">
-                  {/* <img src={this.props.topMatch.photos[0].small} alt='best matched dog' /> */}
+                <Link to={"/all-dogs/" + this.props.topMatch.id}>
+                  <img src={this.props.topMatch.photos[0].small} alt='best matched dog' />
                   <p>{this.props.topMatch.name}</p>
                 </Link>
               </div>
@@ -33,7 +34,7 @@ export default class Home extends Component {
             </div>
           </div>
 
-          <div>
+          <div className='something'>
             <p>Something else goes here</p>
           </div>
 
@@ -52,8 +53,10 @@ export default class Home extends Component {
 
       console.log(this.props);
       return <div className='home-loggedIn'>
-
+        <div className='homeTitle'>
         <p>Welcome {this.props.info.username}</p>
+        </div>
+        
         {homeLink}
 
       </div>

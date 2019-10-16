@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import baseURL from '../../config'
+import Axios from 'axios';
 
 
 
@@ -81,25 +82,25 @@ class DogDetails extends Component {
         {breedNames}
         {/* {levels} */}
         <span>Energy</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Exercise</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Affection</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Watchfulness</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>Heat Sensitivity</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+        <div className="progress">
+          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span>Exercise</span>
+        <div className="progress">
+          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span>Affection</span>
+        <div className="progress">
+          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span>Watchfulness</span>
+        <div className="progress">
+          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span>Heat Sensitivity</span>
+        <div className="progress">
+          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
 
 
       </div>
@@ -120,7 +121,7 @@ class DogDetails extends Component {
               <p>Gender: {gender}</p>
               <p>Size: {size}</p>
               <p>Age: {age}</p>
-              <button className='contact-btn' onClick={() => { this.setState({ toggleContact: true }) }}>Contact</button>
+              <button className='contact-btn' onClick={() => this.setState({ toggleContact: !this.state.toggleContact })}>Contact</button>
             </div>
             {breedDetails}
           </div>
@@ -132,15 +133,32 @@ class DogDetails extends Component {
     return str;
   }
 
+  submitForm = (e) => {
+    e.preventDefault()
+    console.log(this.state)
+    Axios.post(`${baseURL}/api/all-dogs/send-email`, { state: this.state }).then(res => {
+      console.log('sent email', res)
+    })
+
+  }
+
+
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
 
   //value={this.props.dogInfo.contact.email}
+  //value={this.props.theUser.email}
 
   contact = () => {
 
 
     if (this.state.toggleContact) {
       return <div>
-        <form className='send-email' action="/send-email" method="post">
+        <form className='send-email' onSubmit={this.submitForm}>
           <div className='email-div'>
             <div>
               <label htmlFor="">To</label>
@@ -148,17 +166,21 @@ class DogDetails extends Component {
             </div>
             <div>
               <label htmlFor="">From</label>
-              <input type='email' name='fromEmail' value={this.props.theUser.email} />
+              {/* {this.props.user ? */}
+              <input type='email' name='fromEmail' />
+              {/* :
+                ''
+              } */}
             </div>
           </div>
 
           <div className='subject-div'>
             <label htmlFor="">Subject</label>
-            <input type="text" name="subject" id="" />
+            <input type="text" name="subject" id="" onChange={this.handleChange} />
           </div>
           <div className='message-div'>
             <label htmlFor="">Message</label>
-            <textarea type="text" name="message" id=""></textarea>
+            <textarea type="text" name="message" id="" onChange={this.handleChange} ></textarea>
           </div>
           <div className='btn-div'>
             <button type="submit">Submit</button>
@@ -173,15 +195,15 @@ class DogDetails extends Component {
 
   render() {
 
-    console.log(this.props);
+    console.log(this);
     return (
       <div>
         <div className='infoWrapper'>
           {this.getInfo()}
           {/* {this.getBreedInfo()} */}
         </div>
-        <div className='emailWrapper'>
-          <button className='closeEmailWrapper'>X</button>
+        <div className={"emailWrapper " + (this.state.toggleContact ? 'show' : 'hidden')}>
+          <button className='closeEmailWrapper' onClick={() => this.setState({ toggleContact: !this.state.toggleContact })}>X</button>
           {this.contact()}
         </div>
 
