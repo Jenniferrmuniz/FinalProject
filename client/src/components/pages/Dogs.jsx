@@ -15,58 +15,17 @@ class Dogs extends Component {
   }
 
 
-
-  // componentDidMount() {
-  //   axios.get('http://localhost:5000/api/all-dogs').then(res => {
-  //     console.log(res)
-  //     let dogPersonality = res.data.breeds.map(eachDog => {
-  //       return { [eachDog.name]: { n: Math.random(), a: 0, p: 0 } }
-  //     })
-  //     console.log(dogPersonality)
-  //   })
-  // }
-
-  // componentDidMount() {
-  //   axios.get('http://localhost:5000/api/all-dogs').then(res => {
-  //     //console.log(res.data.animals);
-
-  //     let list = res.data.animals.forEach((animal) => {
-  //       console.log(animal)
-  //       return <li><p>{animal.name}</p></li>
-
-  //     })
-  //   })
-  // }
-
-
-
-
+  // Get user when page loads
   componentDidMount() {
-
     axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
       let currentUser = result.data
       this.setState({ user: currentUser })
     })
-
-
-    //this.props.getMatchingDogs()
-    // axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
-
-    //   //console.log(res.data);
-    //   let list = res.data.map((animal, i) => {
-    //     return (animal);
-    //   })
-    //   this.setState({
-    //     dogs: list
-    //   })
-    //   //console.log('LIST[0] ======== ', list[0]);
-    //   //this.props.topMatch(list[0]);
-    // })
-
   }
 
 
 
+  // Loop through each dog to show the list
   showDogs = () => {
     let dogs = this.props.dogs.map((dog, i) => {
       return (
@@ -82,7 +41,7 @@ class Dogs extends Component {
 
 
 
-
+  // Use dog id to get that dogs details
   getDogById = (id) => {
     for (let i = 0; i < this.props.dogs.length; i++) {
       if (this.props.dogs[i].id == id) {

@@ -7,16 +7,18 @@ export default class Home extends Component {
 
 
   showHome = () => {
-    // console.log('%%%%%%%%%%% ', this.props.topMatch);
+
+
     if (this.props.info.username) {
       let homeLink;
+
+      // If user is logged in has taken the quiz
       if (this.props.info.preferences) {
+
         homeLink = <div className='preferences-true'>
           <div className='matches-div'>
-            <div className='bestMatch-div'>
-              <div>
 
-              </div>
+            <div className='bestMatch-div'>
               <p>Your Best Match:</p>
               <div>
                 <Link to={"/all-dogs/" + this.props.topMatch.id}>
@@ -24,8 +26,8 @@ export default class Home extends Component {
                   <p>{this.props.topMatch.name}</p>
                 </Link>
               </div>
-
             </div>
+            
             <div className='matchesLink'>
               <Link className='theLink' to="/all-dogs">See all matches</Link>
             </div>
@@ -37,30 +39,29 @@ export default class Home extends Component {
           <div className='something'>
             <p>Something else goes here</p>
           </div>
-
-
-
         </div>
       }
+
+      // User is logged in but has not taken the quiz yet
       else {
         homeLink = <div className='preferences-false'>
           <p>Want to find your best matches from adoptable dogs near you?</p>
           <Link to="/quiz">Take Quiz</Link>
         </div>
-
       }
 
 
-      console.log(this.props);
       return <div className='home-loggedIn'>
         <div className='homeTitle'>
-        <p>Welcome {this.props.info.username}</p>
+          <p>Welcome {this.props.info.username}</p>
         </div>
-        
+
         {homeLink}
 
       </div>
     }
+
+    // User is NOT logged in
     else {
       return <div className='home-loggedOut'>
         <Link to='/signup'>Get Started</Link>
@@ -69,7 +70,6 @@ export default class Home extends Component {
 
     }
   }
-
 
 
   render() {

@@ -7,12 +7,11 @@ import Axios from 'axios';
 class DogDetails extends Component {
 
   state = {
-    adj: ['great', 'good', 'meh', 'stinky', 'terrible'],
     toggleContact: false
   }
 
 
-
+  // Gets detailed info about the dog
   getInfo = () => {
     let str;
     if (this.props.dogInfo) {
@@ -140,6 +139,8 @@ class DogDetails extends Component {
     return str;
   }
 
+
+  
   submitForm = (e) => {
     e.preventDefault()
     console.log(this.state)

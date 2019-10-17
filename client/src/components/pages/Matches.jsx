@@ -11,7 +11,7 @@ class Matches extends Component {
     }
   }
 
-
+  
   componentDidMount() {
     Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
       let currentUser = result.data
