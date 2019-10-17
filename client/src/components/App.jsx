@@ -12,6 +12,7 @@ import baseURL from '../config'
 
 
 export default class App extends Component {
+  
   state = {
     user: {},
     topMatch: { photos: [{ small: '../../loading.gif' }] },
@@ -19,27 +20,37 @@ export default class App extends Component {
   }
 
 
-    // Get user info when page mounts
-    componentDidMount() {
-      this.isLoggedIn()
-      this.getMatchingDogs()
-    }
 
 
-    isLoggedIn = () => {
-      Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
-        let user = result.data
-        this.setState({ user })
+
+  // Get the info when page mounts
+  componentDidMount() {
+    this.isLoggedIn()
+    this.getMatchingDogs()
+  }
+
+
+
+  // Get the logged in user info and set the state
+  isLoggedIn = () => {
+    Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
+      let user = result.data
+      this.setState({ user })
+    })
+  }
+
+
+
+  // Get the users dog matches from backend and set the state
+  getMatchingDogs = () => {
+    Axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
+      let list = res.data.map((animal, i) => {
+        return (animal);
       })
-    }
-
-
-  // Log out user
-  handleLogoutClick(e) {
-    api.logout().then(res => {
-      // console.log(res)
-      //this.isLoggedIn()
-      this.setState({ user: {} })
+      this.setState({
+        dogs: list,
+        topMatch: list[0]
+      })
     })
   }
 
@@ -56,26 +67,18 @@ export default class App extends Component {
 
 
 
-
-
-
-
-  getMatchingDogs = () => {
-    Axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
-
-      //console.log(res.data);
-      let list = res.data.map((animal, i) => {
-        return (animal);
-      })
-      this.setState({
-        dogs: list,
-        topMatch: list[0]
-      })
-      //console.log('LIST[0] ======== ', list[0]);
-      //this.props.topMatch(list[0]);
+  // Log out user
+  handleLogoutClick(e) {
+    api.logout().then(res => {
+      // console.log(res)
+      //this.isLoggedIn()
+      this.setState({ user: {} })
     })
   }
 
+
+
+  // Show certain parts of nav bar depending on whether the user is logged in or not
   showNav = () => {
     if (this.state.user.username) {
       return (
@@ -99,20 +102,22 @@ export default class App extends Component {
     }
   }
 
+
+
+
   render() {
     return (
       <div className="App">
 
         <header className="App-header">
+
           <div className='pet-harmony-logo'>
             <img className='nav-icon' src='../../white-icon.png' />
             <h3>Pet Harmony</h3>
           </div>
 
           <NavLink className='navlink' to="/" exact>Home</NavLink>
-
           {this.showNav()}
-
         </header>
 
         <Switch>
@@ -125,8 +130,6 @@ export default class App extends Component {
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
-
-
 
       </div>
     )
