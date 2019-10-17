@@ -266,9 +266,9 @@ body{
 
 
       .infoWrapper{
-        margin: 65px;
-        height: 550px;
-        width: 700px;
+        margin: 50px;
+        height: 650px;
+        width: 750px;
         padding: 10px;
         box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
 
@@ -330,7 +330,7 @@ body{
 
 
             .breedDetails{
-              margin-left: 30px;
+              margin-left: 55px;
               width: 55%;
 
               span{
@@ -340,6 +340,8 @@ body{
               .progress{
                 height: 10px;
                 width: 70%;
+                border: 1px solid black;
+                margin-bottom: 10px;
 
                 .progress-bar{
                   // width: 75%;

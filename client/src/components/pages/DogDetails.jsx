@@ -16,19 +16,16 @@ class DogDetails extends Component {
     let str;
     if (this.props.dogInfo) {
 
-      console.log(this.props.dogInfo)
       let { name, photos, gender, size, age, breeds, total, contact } = this.props.dogInfo
       if (total.score === 0) {
-        let perfectMatch = <p>** Perfect Match **</p>
+        // let perfectMatch = <p>** Perfect Match **</p>
       }
 
-      console.log(this.props.dogInfo)
 
       let progressBar;
-      let levels;
+      let category = [];
       for (let key in total) {
 
-        console.log(key, total[key]);
 
         switch (total[key]) {
           case 1:
@@ -46,25 +43,28 @@ class DogDetails extends Component {
           case 5:
             progressBar = 'highest';
             break;
+          default:
+            progressBar = 'none'
         }
-        console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=', key, key != 'score')
         let badWords = 'scorename'
-        // if (key !== 'score'){
         if (!badWords.includes(key)) {
-          // if(key !== 'name'){
-
-          levels = <div>
-            <span>{key}!!!!!!!</span>
+          category.push(<div>
+            <span>{key} :</span>
             <div className="progress">
               <div className={"progress-bar progress-bar-striped bg-info " + progressBar} role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-          </div>
-          // }
+          </div>)
+
+          console.log(category)
         }
 
-        console.log(progressBar);
+        // console.log(progressBar);
 
       }
+
+
+      let levels = <div>{category[0]} {category[1]} {category[2]} {category[3]} {category[4]}</div>
+
 
 
 
@@ -119,7 +119,7 @@ class DogDetails extends Component {
 
       str = <div className='details'>
         <div className='dogName'>
-          <img src={photos[0].small} />
+          <img src={photos[0].large} alt='dog' />
           <h1>{name}</h1>
         </div>
         <div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Route, Link, NavLink, Switch } from 'react-router-dom'
-
+// import { Route, Link, NavLink, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default class Home extends Component {
@@ -27,7 +27,7 @@ export default class Home extends Component {
                 </Link>
               </div>
             </div>
-            
+
             <div className='matchesLink'>
               <Link className='theLink' to="/all-dogs">See all matches</Link>
             </div>

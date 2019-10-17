@@ -12,7 +12,7 @@ import baseURL from '../config'
 
 
 export default class App extends Component {
-  
+
   state = {
     user: {},
     topMatch: { photos: [{ small: '../../loading.gif' }] },
@@ -112,7 +112,7 @@ export default class App extends Component {
         <header className="App-header">
 
           <div className='pet-harmony-logo'>
-            <img className='nav-icon' src='../../white-icon.png' />
+            <img className='nav-icon' src='../../white-icon.png' alt='Pet Harmony Icon' />
             <h3>Pet Harmony</h3>
           </div>
 

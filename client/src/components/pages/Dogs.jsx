@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Route, Link, NavLink, Switch } from 'react-router-dom'
+// import { Route, Link, NavLink, Switch } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import DogDetails from './DogDetails'
 import NoneSelected from './NoneSelected'
 import baseURL from '../../config'
@@ -44,7 +45,7 @@ class Dogs extends Component {
   // Use dog id to get that dogs details
   getDogById = (id) => {
     for (let i = 0; i < this.props.dogs.length; i++) {
-      if (this.props.dogs[i].id == id) {
+      if (this.props.dogs[i].id === Number(id)) {
         return this.props.dogs[i];
       }
     }
