@@ -32,29 +32,36 @@ class DogDetails extends Component {
 
         switch (total[key]) {
           case 1:
-            progressBar = 'width: 0%';
+            progressBar = 'lowest';
             break;
           case 2:
-            progressBar = 'width: 25%';
+            progressBar = 'low';
             break;
           case 3:
-            progressBar = 'width: 50%';
+            progressBar = 'mid';
             break;
           case 4:
-            progressBar = 'width: 75%';
+            progressBar = 'high';
             break;
           case 5:
-            progressBar = 'width: 100%';
+            progressBar = 'highest';
             break;
         }
-
-
-        levels = <div>
-          <span>{key}</span>
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=',key, key != 'score')
+        let badWords = 'scorename'
+        // if (key !== 'score'){
+        if (!badWords.includes(key)){
+          // if(key !== 'name'){
+            
+            levels = <div>
+            <span>{key}!!!!!!!</span>
+            <div className="progress">
+              <div className={"progress-bar progress-bar-striped bg-info " + progressBar} role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
           </div>
-        </div>
+        // }
+      }
+
         console.log(progressBar);
 
       }
@@ -80,10 +87,10 @@ class DogDetails extends Component {
       breedDetails = <div className='breedDetails'>
 
         {breedNames}
-        {/* {levels} */}
-        <span>Energy</span>
+        {levels}
+        {/* <span>Energy</span>
         <div className="progress">
-          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className={"progress-bar progress-bar-striped bg-info "} role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <span>Exercise</span>
         <div className="progress">
@@ -100,7 +107,7 @@ class DogDetails extends Component {
         <span>Heat Sensitivity</span>
         <div className="progress">
           <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
+        </div> */}
 
 
       </div>

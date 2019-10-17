@@ -23,10 +23,16 @@ body{
     justify-content: space-around;
 
     .pet-harmony-logo{
+      display:flex;
+      align-items: center;
       h3{
+        margin: 10px;
         font-size: 30px;
         color:white;
         font-family: 'Marck Script', cursive;
+      }
+      .nav-icon{
+        width: 50px;
       }
     }
 
@@ -336,7 +342,22 @@ body{
                 width: 70%;
 
                 .progress-bar{
+                  // width: 75%;
+                }
+                .lowest{
+                  width: 0%;
+                }
+                .low{
                   width: 25%;
+                }
+                .mid{
+                  width: 50%;
+                }
+                .high{
+                  width:75%;
+                }
+                .highest{
+                  width:100%;
                 }
               }
 

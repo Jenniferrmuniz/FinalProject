@@ -14,10 +14,27 @@ import baseURL from '../config'
 export default class App extends Component {
   state = {
     user: {},
-    topMatch: { photos: [{ small: './../../public/loading.gif' }] },
+    topMatch: { photos: [{ small: '../../loading.gif' }] },
     dogs: []
   }
 
+
+    // Get user info when page mounts
+    componentDidMount() {
+      this.isLoggedIn()
+      this.getMatchingDogs()
+    }
+
+
+    isLoggedIn = () => {
+      Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
+        let user = result.data
+        this.setState({ user })
+      })
+    }
+
+
+  // Log out user
   handleLogoutClick(e) {
     api.logout().then(res => {
       // console.log(res)
@@ -27,6 +44,8 @@ export default class App extends Component {
   }
 
 
+
+  // Set user preferences after taking the quiz
   setPreferences = (preferences) => {
     let user = { ...this.state.user }
     user.preferences = preferences
@@ -36,23 +55,9 @@ export default class App extends Component {
   }
 
 
-  componentDidMount() {
-    // console.log('fetch the user once')
-    this.isLoggedIn()
-    this.getMatchingDogs()
-  }
 
 
-  isLoggedIn = () => {
-    Axios.get(`${baseURL}/api/user`, { withCredentials: true }).then(result => {
-      // console.log(result)
-      let user = result.data
-      // console.log(user)
-      //if (user) {
-      this.setState({ user })
-      //}
-    })
-  }
+
 
 
   getMatchingDogs = () => {
@@ -100,7 +105,7 @@ export default class App extends Component {
 
         <header className="App-header">
           <div className='pet-harmony-logo'>
-            <img src='' />
+            <img className='nav-icon' src='../../white-icon.png' />
             <h3>Pet Harmony</h3>
           </div>
 
