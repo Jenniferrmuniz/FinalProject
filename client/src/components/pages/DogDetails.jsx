@@ -16,7 +16,8 @@ class DogDetails extends Component {
     let str;
     if (this.props.dogInfo) {
 
-      let { name, photos, gender, size, age, breeds, total } = this.props.dogInfo
+      console.log(this.props.dogInfo)
+      let { name, photos, gender, size, age, breeds, total, contact } = this.props.dogInfo
       if (total.score === 0) {
         let perfectMatch = <p>** Perfect Match **</p>
       }
@@ -46,20 +47,20 @@ class DogDetails extends Component {
             progressBar = 'highest';
             break;
         }
-        console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=',key, key != 'score')
+        console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=', key, key != 'score')
         let badWords = 'scorename'
         // if (key !== 'score'){
-        if (!badWords.includes(key)){
+        if (!badWords.includes(key)) {
           // if(key !== 'name'){
-            
-            levels = <div>
+
+          levels = <div>
             <span>{key}!!!!!!!</span>
             <div className="progress">
               <div className={"progress-bar progress-bar-striped bg-info " + progressBar} role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-        // }
-      }
+          // }
+        }
 
         console.log(progressBar);
 
@@ -127,6 +128,7 @@ class DogDetails extends Component {
               <p>Gender: {gender}</p>
               <p>Size: {size}</p>
               <p>Age: {age}</p>
+              <p>Location: {contact.address.city}, {contact.address.state}</p>
               <button className='contact-btn' onClick={() => this.setState({ toggleContact: !this.state.toggleContact })}>Contact</button>
             </div>
             {breedDetails}
@@ -140,7 +142,7 @@ class DogDetails extends Component {
   }
 
 
-  
+
   submitForm = (e) => {
     e.preventDefault()
     console.log(this.state)
