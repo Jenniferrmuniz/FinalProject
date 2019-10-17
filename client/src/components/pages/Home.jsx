@@ -21,8 +21,8 @@ export default class Home extends Component {
             <div className='bestMatch-div'>
               <p>Your Best Match:</p>
               <div>
-                <Link to={"/all-dogs/" + this.props.topMatch.id}>
-                  <img src={this.props.topMatch.photos[0].small} alt='best matched dog' />
+                <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
+                  <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
                   <p>{this.props.topMatch.name}</p>
                 </Link>
               </div>

@@ -17,6 +17,7 @@ body{
 
 
 
+  // Nav bar
   .App-header{
     background-color: #99D3DF;
     display: flex;
@@ -51,6 +52,7 @@ body{
 
 
 
+  // Home Page
   .homePage{
     padding: 50px;
     
@@ -60,10 +62,10 @@ body{
     }
 
 
+    // Views when user is logged in
     .home-loggedIn{
 
       .homeTitle{
-        border:2px solid blue;
         margin: 20px;
         p{
           font-family: 'Marck Script', cursive;
@@ -71,24 +73,59 @@ body{
         }
       }
 
+      // Views when user has taken quiz
       .preferences-true{
         display:flex;
         flex-direction: row;
         justify-content: space-around;
 
         .matches-div{
+          border: 2px solid red;
           background-color: rgba(233, 233, 233, .3);
           width:600px;
-          height: 400px;
+          height: 500px;
           padding: 90px;
           display:flex;
           flex-direction: column;
           justify-content: space-around;
           .bestMatch-div{
-            height: 70%;
+            font-size: 24px; 
+            border: 2px solid blue;
+            height: 80%;
             display:flex;
             flex-direction:row;
             justify-content: space-around;
+            align-items: center;
+
+            .link-hover-div{
+              .top-match{
+                position: relative;
+                height: 200px;
+                opacity:1;
+                transition: opacity .5s ease-in-out;
+              }
+              p{
+                transition: opacity .5s ease-in-out;
+                position: absolute;
+                z-index: 10;
+                // top:1;
+                // left:0;
+                opacity:0;
+              }
+  
+
+            }
+            .link-hover-div:hover{
+              p{
+                color:black;
+                opacity:1;
+              }
+              .top-match{
+                opacity:0;
+              }
+            }
+
+
           }
           .matchesLink{
             background-color: rgba(233, 233, 233, .3);
@@ -121,6 +158,10 @@ body{
         }
       }
 
+
+
+
+      // Views when user has not taken quiz
       .preferences-false{
 
       }
@@ -146,6 +187,7 @@ body{
 
 
 
+  // Quiz Page
   .quizPage{
     height: 60vh;
     display:flex;
@@ -199,31 +241,31 @@ body{
           transform: scale(1.05);
           transition: .5s ease;
         }
-
         
       }
 
-
     }
-
 
   }
 
 
 
+
+  // Dog Page
   .dogPage{
 
     display:flex;
     flex-direction: row;
     justify-content: space-around;
 
+
+    // List of matching dogs
     .dogListWrapper{
       margin: 50px;
       height: 600px;
       display:flex;
       flex-direction: column;
       overflow-y: scroll;
-
 
 
       .eachDog{
@@ -253,18 +295,19 @@ body{
     }
 
     
-
+    // Details of dog
     .dogDetailsWrapper{
       padding:0;
 
 
-
+      // View when no dog is selected
       .none-selected{
         margin:200px;
         font-size: 24px;
       }
 
 
+      // Selected dog info
       .infoWrapper{
         margin: 50px;
         height: 650px;
@@ -272,7 +315,7 @@ body{
         padding: 10px;
         box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
 
-        
+
         .details{
           height: 100%;
           width: 100%;
@@ -281,6 +324,8 @@ body{
           justify-content: space-around;
           align-items: center;
 
+
+          // Title: Dog name and pic
           .dogName{
             width:650px;
             display:flex;
@@ -300,6 +345,7 @@ body{
             }
           }
 
+          // Content: Dog information
           .info-div{
             width: 650px;
             font-size: 20px;
@@ -328,7 +374,7 @@ body{
               }
             }
 
-
+            // Info about the breed
             .breedDetails{
               margin-left: 55px;
               width: 55%;
@@ -343,9 +389,6 @@ body{
                 border: 1px solid black;
                 margin-bottom: 10px;
 
-                .progress-bar{
-                  // width: 75%;
-                }
                 .lowest{
                   width: 0%;
                 }
@@ -362,19 +405,13 @@ body{
                   width:100%;
                 }
               }
-
-
             }
           }
-
-
-
         }
-
       }
 
+      // Show email pop up form when contact button is clicked
       .show.emailWrapper{
-        //display:block;
         width: 55vw; 
         height: 55vh;
         opacity: 1; 
@@ -446,15 +483,8 @@ body{
             }
           }
         }
-        
-
-
-
-
 
       }
-
-
 
 
     }
@@ -469,93 +499,93 @@ body{
 
 
 
-    .dogInfoWrapper{
-      background-color: #E9E9E9;
-      margin: 65px;
-      height: 550px;
-      width: 700px;      
+    // .dogInfoWrapper{
+    //   background-color: #E9E9E9;
+    //   margin: 65px;
+    //   height: 550px;
+    //   width: 700px;      
 
 
-      .dogName{
-        display:flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        img{
-          height: 200px;
-          margin: 40px;
-        }
-        h1{
-          font-family: 'Marck Script', cursive;
-          margin-left: 50px;
-        }
-      }
-      .contact-btn{
-        color: white;
-        background-color: #88BBD6;
-        border: 2px solid #99D3DF;
-        padding: 10px 15px;
-      }
+    //   .dogName{
+    //     display:flex;
+    //     flex-direction: row;
+    //     justify-content: flex-start;
+    //     align-items: center;
+    //     img{
+    //       height: 200px;
+    //       margin: 40px;
+    //     }
+    //     h1{
+    //       font-family: 'Marck Script', cursive;
+    //       margin-left: 50px;
+    //     }
+    //   }
+    //   .contact-btn{
+    //     color: white;
+    //     background-color: #88BBD6;
+    //     border: 2px solid #99D3DF;
+    //     padding: 10px 15px;
+    //   }
 
-      .send-email{
-        width: 100%;
-        margin: 5px;
-        border: 1px solid blue;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    //   .send-email{
+    //     width: 100%;
+    //     margin: 5px;
+    //     border: 1px solid blue;
+    //     display:flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
 
-        .email-div{
-          margin: 5px;
-          display:flex;
-          flex-direction: row;
-          justify-content: space-around;
+    //     .email-div{
+    //       margin: 5px;
+    //       display:flex;
+    //       flex-direction: row;
+    //       justify-content: space-around;
 
-          div{
-            margin: 5px;
-          }
-        }
-      //   .subject-div{
-      //     width: 100%;
-      //     margin: 5px;
-      //     border: 1px solid blue;
-      //     input{
-      //       width: 80%;
-      //   }
-      // }
-        .message-div, .subject-div{
-          width: 100%;
-          margin: 5px;
-          border: 1px solid blue;
-          display:flex;
-          flex-direction: row;
-          align-items: center;
-          input{
-            margin: 5px;
-            width: 80%;
-          }
-          textarea{
-            margin: 5px;
-            width: 80%;
-            height: 100px;
-          }
-        }
-        .btn-div{
-          width:100%;
-          display:flex;
-          justify-content: center;
-          button{
-            width: 40%;
-          }
-        }
-      }
-
-
+    //       div{
+    //         margin: 5px;
+    //       }
+    //     }
+    //   //   .subject-div{
+    //   //     width: 100%;
+    //   //     margin: 5px;
+    //   //     border: 1px solid blue;
+    //   //     input{
+    //   //       width: 80%;
+    //   //   }
+    //   // }
+    //     .message-div, .subject-div{
+    //       width: 100%;
+    //       margin: 5px;
+    //       border: 1px solid blue;
+    //       display:flex;
+    //       flex-direction: row;
+    //       align-items: center;
+    //       input{
+    //         margin: 5px;
+    //         width: 80%;
+    //       }
+    //       textarea{
+    //         margin: 5px;
+    //         width: 80%;
+    //         height: 100px;
+    //       }
+    //     }
+    //     .btn-div{
+    //       width:100%;
+    //       display:flex;
+    //       justify-content: center;
+    //       button{
+    //         width: 40%;
+    //       }
+    //     }
+    //   }
 
 
 
-    }
+
+
+  //  }
   }
 }
 
