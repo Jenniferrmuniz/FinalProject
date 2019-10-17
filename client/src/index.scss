@@ -154,12 +154,20 @@ body{
           }
         }
 
-        .something{
-          background-color: rgba(233, 233, 233, .3);
-          height: 200px;
-          width: 200px;
-          padding:30px;
+        .home-div{
+          height: 500px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .something{
+            background-color: rgba(233, 233, 233, .3);
+            height: 200px;
+            width: 200px;
+            padding:30px;
+          }
         }
+
       }
 
 
@@ -492,6 +500,64 @@ body{
       }
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+  .tipsPage{
+
+
+    h1{
+      font-family: 'Marck Script', cursive;
+      text-align: center;
+      margin: 20px 350px;
+      font-size: 56px;
+
+      .walking-dog{
+        margin: 30px;
+        width: 250px;
+      }
+    }
+
+    .tips-list{
+      margin-left: 75px;
+      width: 90%;
+
+      .each-tip{
+        margin:10px;
+
+        h2{
+          color: #88BBD6;
+          text-decoration: none;
+        }
+        h2:active{
+          text-decoration: none;
+        }
+        
+      }
+    }
+
+
+    .accordian{
+      
+      .card{
+        width: 500px;
+        color: #88BBD6;
+      }
+    }
+
+
+  }
+
+
+
 }
 
 

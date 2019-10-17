@@ -21,10 +21,10 @@ export default class Home extends Component {
             <div className='bestMatch-div'>
               <p>Your Best Match:</p>
 
-                <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
-                  <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
-                  <span>{this.props.topMatch.name}</span>
-                </Link>
+              <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
+                <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
+                <span>{this.props.topMatch.name}</span>
+              </Link>
 
             </div>
 
@@ -36,9 +36,19 @@ export default class Home extends Component {
             </div>
           </div>
 
-          <div className='something'>
-            <p>Something else goes here</p>
+          <div className='home-div'>
+            <div className='something'>
+              <p>Ready to adopt?</p>
+              <Link to='/tips'>Check out these tips!</Link>
+            </div>
+            <div className='something'>
+              <p>Already adopted?</p>
+              <a href='http://pawnderapp.herokuapp.com/'>Schedule a playdate using Pawnder!</a>
+
+
+            </div>
           </div>
+
         </div>
       }
 

@@ -6,6 +6,7 @@ import Signup from './pages/Signup'
 import api from '../api'
 import Dogs from './pages/Dogs'
 import Quiz from './pages/Quiz'
+import Tips from './pages/Tips'
 import Matches from './pages/Matches'
 import Axios from '../../../server/node_modules/axios'
 import baseURL from '../config'
@@ -86,7 +87,8 @@ export default class App extends Component {
         <React.Fragment>
           <NavLink className='navlink' to="/all-dogs">All dogs</NavLink>
           <NavLink className='navlink' to="/quiz">Quiz</NavLink>
-          <NavLink className='navlink' to="/matches">Matches</NavLink>
+          {/* <NavLink className='navlink' to="/matches">Matches</NavLink> */}
+          <NavLink className='navlink' to="/tips">Adoption tips</NavLink>
           <Link className='navlink' to="/" onClick={e => this.handleLogoutClick(e)}>Logout</Link>
         </React.Fragment>
 
@@ -128,6 +130,7 @@ export default class App extends Component {
           <Route path="/all-dogs" component={(props) => <Dogs getMatchingDogs={this.getMatchingDogs} dogs={this.state.dogs} {...props} />} />
           <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
+          <Route path="/tips" component={(props) => <Tips preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
 
