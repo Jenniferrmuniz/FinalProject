@@ -19,6 +19,7 @@ export default class Signup extends Component {
     })
   }
 
+
   handleClick(e) {
     e.preventDefault()
     let data = {
@@ -53,6 +54,7 @@ export default class Signup extends Component {
           <button onClick={e => this.handleClick(e)}>Signup</button>
         </form>
         {this.state.message && (<div className="info info-danger">{this.state.message}</div>)}
+        <img src='../../../dog.png' />
       </div>
     )
   }

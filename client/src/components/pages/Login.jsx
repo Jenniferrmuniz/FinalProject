@@ -26,6 +26,7 @@ export default class Login extends Component {
         console.log('SUCCESS!')
         this.props.isLoggedIn();
         this.props.history.push('/') // Redirect to the home page
+        this.props.getMatchingDogs()
       })
       .catch(err => this.setState({ message: err.toString() }))
   }
@@ -44,6 +45,7 @@ export default class Login extends Component {
           <button onClick={e => this.handleClick(e)}>Login</button>
         </form>
         {this.state.message && (<div className="info info-danger">{this.state.message}</div>)}
+        <img src='../../../dog.png' />
       </div>
     )
   }

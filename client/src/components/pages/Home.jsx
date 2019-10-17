@@ -13,8 +13,8 @@ export default class Home extends Component {
       let homeLink;
 
       // If user is logged in has taken the quiz
-      if (this.props.info.preferences) {
-
+      if (this.props.info.preferences && this.props.topMatch) {
+        console.log(this.props)
         homeLink = <div className='preferences-true'>
           <div className='matches-div'>
 
@@ -22,7 +22,13 @@ export default class Home extends Component {
               <p>Your Best Match :</p>
 
               <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
-                <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
+                {this.props.topMatch.photos[0] ?
+                  <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
+
+                  :
+                  <img className='top-match' src={'defaultPic.png'} alt='best matched dog' />
+
+                }
                 <span>{this.props.topMatch.name}</span>
               </Link>
 
@@ -69,6 +75,8 @@ export default class Home extends Component {
     // User is NOT logged in
     else {
       return <div className='home-loggedOut'>
+        <p>Pet Harmony</p>
+        <img src='../../../black-icon.png' />
         <Link to='/signup'>Get Started</Link>
         <p>Already have an account? <Link to='/login'>Log in</Link></p>
       </div>

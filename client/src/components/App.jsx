@@ -14,12 +14,12 @@ import baseURL from '../config'
 
 export default class App extends Component {
 
+
   state = {
     user: {},
     topMatch: { photos: [{ large: '../../loading.gif' }] },
     dogs: []
   }
-
 
 
 
@@ -44,14 +44,20 @@ export default class App extends Component {
 
   // Get the users dog matches from backend and set the state
   getMatchingDogs = () => {
+    this.setState({
+      topMatch: { photos: [{ large: '../../loading.gif' }] }
+    })
     Axios.get(`${baseURL}/api/all-dogs`, { withCredentials: true }).then(res => {
       let list = res.data.map((animal, i) => {
         return (animal);
       })
-      this.setState({
-        dogs: list,
-        topMatch: list[0]
-      })
+      console.log('LIST', list)
+      if (list[0]) {
+        this.setState({
+          dogs: list,
+          topMatch: list[0]
+        })
+      }
     })
   }
 
@@ -126,9 +132,9 @@ export default class App extends Component {
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/" exact component={(props) => <Home info={this.state.user} topMatch={this.state.topMatch} {...props} />} />
           <Route path="/signup" component={(props) => <Signup isLoggedIn={this.isLoggedIn} {...props} />} />
-          <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} />} />
+          <Route path="/login" component={(props) => <Login isLoggedIn={this.isLoggedIn} {...props} getMatchingDogs={this.getMatchingDogs} />} />
           <Route path="/all-dogs" component={(props) => <Dogs getMatchingDogs={this.getMatchingDogs} dogs={this.state.dogs} {...props} />} />
-          <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} />} />
+          <Route path="/quiz" component={(props) => <Quiz {...props} answers={this.setPreferences} getMatchingDogs={this.getMatchingDogs} />} />
           <Route path="/matches" component={(props) => <Matches preferences={this.state.user} />} />
           <Route path="/tips" component={(props) => <Tips preferences={this.state.user} />} />
           <Route render={() => <h2>404</h2>} />

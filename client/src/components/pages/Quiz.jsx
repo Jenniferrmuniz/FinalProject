@@ -46,7 +46,8 @@ class Quiz extends Component {
     e.preventDefault();
     this.props.answers(this.state);
     Axios.post(`${baseURL}/api/savequiz`, this.state, { withCredentials: true }).then(res => {
-      this.props.history.push('/matches');
+      this.props.getMatchingDogs();
+      this.props.history.push('/all-dogs');
     }).catch(err => console.error(err))
   }
 
@@ -138,7 +139,7 @@ class Quiz extends Component {
           <button type='button' name='active' className={(this.state.active === "2" ? 'selected' : '')} value='2' onClick={this.setForm}>I'd definitely prefer to be lazy and just relax!</button>
         </div>
         <div className='next-div'>
-        <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm} className='nextQ'>Next question</button>
+          <button type='button' name='nextQ' value={this.state.nextQ + 1} onClick={this.setForm} className='nextQ'>Next question</button>
         </div>
       </div>,
 
