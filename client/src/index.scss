@@ -62,6 +62,7 @@ body{
     }
 
 
+
     // Views when user is logged in
     .home-loggedIn{
 
@@ -80,8 +81,7 @@ body{
         justify-content: space-around;
 
         .matches-div{
-          border: 2px solid red;
-          background-color: rgba(233, 233, 233, .3);
+          box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
           width:600px;
           height: 500px;
           padding: 90px;
@@ -89,8 +89,9 @@ body{
           flex-direction: column;
           justify-content: space-around;
           .bestMatch-div{
+            background-color: #99D3DF;
+            padding: 40px;
             font-size: 24px; 
-            border: 2px solid blue;
             height: 80%;
             display:flex;
             flex-direction:row;
@@ -98,27 +99,29 @@ body{
             align-items: center;
 
             .link-hover-div{
+              margin: 40px;
               .top-match{
+                border: 1px solid white;
                 position: relative;
                 height: 200px;
                 opacity:1;
                 transition: opacity .5s ease-in-out;
               }
-              p{
+              span{
                 transition: opacity .5s ease-in-out;
                 position: absolute;
                 z-index: 10;
-                // top:1;
-                // left:0;
                 opacity:0;
               }
   
 
             }
             .link-hover-div:hover{
-              p{
+              span{
                 color:black;
                 opacity:1;
+                justify-self: center;
+
               }
               .top-match{
                 opacity:0;
@@ -130,9 +133,10 @@ body{
           .matchesLink{
             background-color: rgba(233, 233, 233, .3);
             padding: 15px 30px;
-            border-radius: 30px;
+            width:70%;
+            border-radius: 15px;
             border: 3px solid #88BBD6;
-            margin: 15px;
+            margin: 25px 30px 0px 80px;
             text-align: center;
 
             .theLink{
@@ -195,9 +199,11 @@ body{
     align-items: center;
 
     .question-div{
-      width: 70%;
-      height:80%;
-      margin-top: 150px;
+      box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
+      // width: 70%;
+      // height:80%;
+      margin-top: 200px;
+      padding: 20px;
       display:flex;
       flex-direction: column;
       justify-content: space-around;
@@ -215,7 +221,7 @@ body{
         button{
           font-family: 'Baumans', cursive;
           padding: 15px 30px;
-          border-radius: 30px;
+          border-radius: 15px;
           margin: 5px;
           transition: all .2s;
           outline:none;
@@ -232,7 +238,7 @@ body{
         button{
           font-family: 'Baumans', cursive;
           padding: 15px 30px;
-          border-radius: 30px;
+          border-radius: 15px;
           border: 3px solid #88BBD6;
           margin: 30px;
           outline:none;
@@ -368,7 +374,7 @@ body{
                 color: white;
                 background-color: #88BBD6;
                 border: 2px solid #99D3DF;
-                border-radius: 30px;
+                border-radius: 15px;
                 padding: 5px 70px;
                 margin-top: 10px;
               }
@@ -483,109 +489,8 @@ body{
             }
           }
         }
-
       }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-    // .dogInfoWrapper{
-    //   background-color: #E9E9E9;
-    //   margin: 65px;
-    //   height: 550px;
-    //   width: 700px;      
-
-
-    //   .dogName{
-    //     display:flex;
-    //     flex-direction: row;
-    //     justify-content: flex-start;
-    //     align-items: center;
-    //     img{
-    //       height: 200px;
-    //       margin: 40px;
-    //     }
-    //     h1{
-    //       font-family: 'Marck Script', cursive;
-    //       margin-left: 50px;
-    //     }
-    //   }
-    //   .contact-btn{
-    //     color: white;
-    //     background-color: #88BBD6;
-    //     border: 2px solid #99D3DF;
-    //     padding: 10px 15px;
-    //   }
-
-    //   .send-email{
-    //     width: 100%;
-    //     margin: 5px;
-    //     border: 1px solid blue;
-    //     display:flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-
-    //     .email-div{
-    //       margin: 5px;
-    //       display:flex;
-    //       flex-direction: row;
-    //       justify-content: space-around;
-
-    //       div{
-    //         margin: 5px;
-    //       }
-    //     }
-    //   //   .subject-div{
-    //   //     width: 100%;
-    //   //     margin: 5px;
-    //   //     border: 1px solid blue;
-    //   //     input{
-    //   //       width: 80%;
-    //   //   }
-    //   // }
-    //     .message-div, .subject-div{
-    //       width: 100%;
-    //       margin: 5px;
-    //       border: 1px solid blue;
-    //       display:flex;
-    //       flex-direction: row;
-    //       align-items: center;
-    //       input{
-    //         margin: 5px;
-    //         width: 80%;
-    //       }
-    //       textarea{
-    //         margin: 5px;
-    //         width: 80%;
-    //         height: 100px;
-    //       }
-    //     }
-    //     .btn-div{
-    //       width:100%;
-    //       display:flex;
-    //       justify-content: center;
-    //       button{
-    //         width: 40%;
-    //       }
-    //     }
-    //   }
-
-
-
-
-
-  //  }
   }
 }
 
