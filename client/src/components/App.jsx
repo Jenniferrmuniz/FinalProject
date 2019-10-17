@@ -16,7 +16,7 @@ export default class App extends Component {
 
   state = {
     user: {},
-    topMatch: { photos: [{ small: '../../loading.gif' }] },
+    topMatch: { photos: [{ large: '../../loading.gif' }] },
     dogs: []
   }
 

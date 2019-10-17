@@ -66,16 +66,10 @@ body{
     // Views when user is logged in
     .home-loggedIn{
 
-      .homeTitle{
-        margin: 20px;
-        p{
-          font-family: 'Marck Script', cursive;
-          font-size: 36px;
-        }
-      }
 
       // Views when user has taken quiz
       .preferences-true{
+        margin-top: 50px;
         display:flex;
         flex-direction: row;
         justify-content: space-around;
@@ -90,8 +84,13 @@ body{
           justify-content: space-around;
           .bestMatch-div{
             background-color: #99D3DF;
+            -webkit-box-shadow: 10px 10px 74px -34px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 74px -34px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 74px -34px rgba(0,0,0,0.75);
             padding: 40px;
             font-size: 24px; 
+            color: white;
+            text-decoration: underline;
             height: 80%;
             display:flex;
             flex-direction:row;
@@ -101,7 +100,7 @@ body{
             .link-hover-div{
               margin: 40px;
               .top-match{
-                border: 1px solid white;
+                border: 2px inset #88BBD6;
                 position: relative;
                 height: 200px;
                 opacity:1;
@@ -165,6 +164,9 @@ body{
             height: 200px;
             width: 200px;
             padding:30px;
+            -webkit-box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
           }
         }
 
@@ -265,6 +267,7 @@ body{
 
 
 
+
   // Dog Page
   .dogPage{
 
@@ -304,6 +307,7 @@ body{
         img{
           height: 50px;
           width: auto;
+          border: 1px solid white;
         }
       }
     }
@@ -350,6 +354,9 @@ body{
               height: 200px;
               margin: 10px 10px;
               border: 4px ridge #88BBD6;
+              -webkit-box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
+              -moz-box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
+              box-shadow: 10px 10px 26px -16px rgba(0,0,0,0.75);
             }
             h1{
               font-family: 'Marck Script', cursive;

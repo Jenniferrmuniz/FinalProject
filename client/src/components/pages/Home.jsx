@@ -19,7 +19,7 @@ export default class Home extends Component {
           <div className='matches-div'>
 
             <div className='bestMatch-div'>
-              <p>Your Best Match:</p>
+              <p>Your Best Match :</p>
 
               <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
                 <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
@@ -62,12 +62,7 @@ export default class Home extends Component {
 
 
       return <div className='home-loggedIn'>
-        <div className='homeTitle'>
-          <p>Welcome {this.props.info.username}</p>
-        </div>
-
         {homeLink}
-
       </div>
     }
 
