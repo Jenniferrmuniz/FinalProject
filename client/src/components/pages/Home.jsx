@@ -75,10 +75,20 @@ export default class Home extends Component {
     // User is NOT logged in
     else {
       return <div className='home-loggedOut'>
-        <p>Pet Harmony</p>
-        <img src='../../../black-icon.png' />
-        <Link to='/signup'>Get Started</Link>
-        <p>Already have an account? <Link to='/login'>Log in</Link></p>
+
+        <div className='title'>
+          <span>Pet Harmony</span>
+          <img src='../../../black-icon.png' />
+        </div>
+
+        <div className='signup-div'>
+          <Link to='/signup'>Get Started</Link>
+        </div>
+
+        <div className='login-div'>
+          <p>Already have an account? <Link to='/login'>Log in</Link></p>
+        </div>
+
       </div>
 
     }
