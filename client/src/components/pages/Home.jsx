@@ -29,7 +29,7 @@ export default class Home extends Component {
                   <img className='top-match' src={'defaultPic.png'} alt='best matched dog' />
 
                 }
-                <span>{this.props.topMatch.name}</span>
+                <p>{this.props.topMatch.name}</p>
               </Link>
 
             </div>
@@ -50,8 +50,10 @@ export default class Home extends Component {
             <div className='something'>
               <p>Already adopted?</p>
               <a href='http://pawnderapp.herokuapp.com/'>Schedule a playdate using Pawnder!</a>
-
-
+            </div>
+            <div className='something'>
+              <p>Looking for a groomer?</p>
+              <a href='http://spaws-project.herokuapp.com/'>Visit Spaws!</a>
             </div>
           </div>
 
@@ -82,11 +84,12 @@ export default class Home extends Component {
         </div>
 
         <div className='signup-div'>
-          <Link to='/signup'>Get Started</Link>
+          <Link className='sign-up' to='/signup'>Get Started</Link>
+          <p className='log-in'>Already have an account? <Link to='/login'>Log in</Link></p>
         </div>
 
-        <div className='login-div'>
-          <p>Already have an account? <Link to='/login'>Log in</Link></p>
+        <div className='image-div'>
+          <img src='../../../dogs-pic.png' />
         </div>
 
       </div>

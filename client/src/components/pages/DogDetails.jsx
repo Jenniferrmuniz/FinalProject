@@ -160,7 +160,6 @@ class DogDetails extends Component {
     })
   }
 
-  //value={this.props.dogInfo.contact.email}
   //value={this.props.theUser.email}
 
   contact = () => {
@@ -172,12 +171,12 @@ class DogDetails extends Component {
           <div className='email-div'>
             <div>
               <label htmlFor="">To</label>
-              <input type="email" name="toEmail" id="" />
+              <input type="email" name="toEmail" id="" value={this.props.dogInfo.contact.email} />
             </div>
             <div>
-              <label htmlFor="">From</label>
+              {/* <label htmlFor="">From</label> */}
               {/* {this.props.user ? */}
-              <input type='email' name='fromEmail' />
+              {/* <input type='email' name='fromEmail' /> */}
               {/* :
                 ''
               } */}

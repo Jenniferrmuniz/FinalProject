@@ -40,21 +40,34 @@ export default class Signup extends Component {
   render() {
     return (
       <div className="Signup">
-        <h2>Signup</h2>
-        <form>
-          Username:{' '}
-          <input type="text" value={this.state.username} name="username" onChange={this.handleInputChange} />{' '}
-          <br />
-          Email:{' '}
-          <input type="email" value={this.state.email} name="email" onChange={this.handleInputChange} />{' '}
-          <br />
-          Password:{' '}
-          <input type="password" value={this.state.password} name="password" onChange={this.handleInputChange} />{' '}
-          <br />
-          <button onClick={e => this.handleClick(e)}>Signup</button>
-        </form>
-        {this.state.message && (<div className="info info-danger">{this.state.message}</div>)}
-        <img src='../../../dog.png' />
+
+        <div class='background-dog'>
+          <img src='../../../dog.png' />
+        </div>
+
+        <div className='signUp-form'>
+          <h2>Signup</h2>
+          <form>
+            <div>
+              Username:{' '}
+              <input type="text" value={this.state.username} name="username" onChange={this.handleInputChange} />{' '}
+            </div>
+            <div>
+              Email:{' '}
+              <input type="email" value={this.state.email} name="email" onChange={this.handleInputChange} />{' '}
+            </div>
+            <div>
+              Password:{' '}
+              <input type="password" value={this.state.password} name="password" onChange={this.handleInputChange} />{' '}
+            </div>
+            <div>
+              <button onClick={e => this.handleClick(e)}>Signup</button>
+            </div>
+          </form>
+          {this.state.message && (<div className="info info-danger">{this.state.message}</div>)}
+        </div>
+
+
       </div>
     )
   }

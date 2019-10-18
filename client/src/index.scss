@@ -59,21 +59,21 @@ body{
   
 
     .home-loggedOut{
-      margin: 100px 200px;
+      margin: 20px 200px;
       width: 900px;
+      height: 500px;
       display:flex;
       flex-direction: column;
       align-items: center;
 
-
-
       .title{
-        margin: 50px;
+        margin: 15px;
         display:flex;
         flex-direction: row;
 
         span{
-          font-size: 46px;
+          font-size: 54px;
+          font-family: 'Marck Script', cursive;
           margin-right: 30px;
         }
         img{
@@ -82,12 +82,21 @@ body{
       }
 
       .signup-div{
-        font-size: 36px;
+        box-shadow: 0 0 14px 14px rgb(233, 233, 233) inset;
+        padding: 100px;
+        margin-top: 10px;
+        .sign-up{
+          font-size: 36px;
+        }
+        .log-in{
+          
+        }
       }
 
-      .login-div{
-        margin: 50px;
+      .image-div{
+        margin-top: 30px;
       }
+
     }
 
 
@@ -135,26 +144,26 @@ body{
                 opacity:1;
                 transition: opacity .5s ease-in-out;
               }
-              span{
+              p{
                 transition: opacity .5s ease-in-out;
                 position: absolute;
                 z-index: 10;
-                opacity:0;
-              }
-  
-
-            }
-            .link-hover-div:hover{
-              span{
-                color:black;
-                opacity:1;
-                justify-self: center;
-
-              }
-              .top-match{
-                opacity:0;
+                color: white;
+                text-decoration: none;
+                // opacity:0;
               }
             }
+            // .link-hover-div:hover{
+            //   span{
+            //     color:black;
+            //     opacity:1;
+            //     justify-self: center;
+
+            //   }
+            //   .top-match{
+            //     opacity:0;
+            //   }
+            // }
 
 
           }
@@ -216,7 +225,40 @@ body{
 
 
 
+  .Signup{
+    margin: 100px;
 
+    display:flex;
+    flex-direction: row;
+
+    .background-dog{
+      margin-top: 40px;
+      img{
+        width: 400px;
+      }
+    }
+
+
+    .signUp-form{
+      margin-left: 200px;
+      
+
+      h2{
+        font-family: 'Marck Script', cursive;
+        font-size: 54px;
+        margin: 75px;
+      }
+
+      form{
+        display:flex;
+
+      }
+
+
+    }
+
+
+  }
 
 
 
