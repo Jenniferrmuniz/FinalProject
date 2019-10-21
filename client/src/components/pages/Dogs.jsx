@@ -34,6 +34,7 @@ class Dogs extends Component {
           <p>{i + 1}. {dog.name}</p>
           {dog.photos.length > 0 && <img src={dog.photos[0].medium} alt='dog pic' />}
         </Link>
+
       )
     })
     return dogs

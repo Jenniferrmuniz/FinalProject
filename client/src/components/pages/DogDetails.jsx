@@ -55,10 +55,8 @@ class DogDetails extends Component {
             </div>
           </div>)
 
-          console.log(category)
         }
 
-        // console.log(progressBar);
 
       }
 
