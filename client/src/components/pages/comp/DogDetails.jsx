@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import baseURL from '../../config'
+import baseURL from '../../../config'
 import Axios from 'axios';
 
 
