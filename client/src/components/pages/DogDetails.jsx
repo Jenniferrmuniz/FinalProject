@@ -86,26 +86,6 @@ class DogDetails extends Component {
 
         {breedNames}
         {levels}
-        {/* <span>Energy</span>
-        <div className="progress">
-          <div className={"progress-bar progress-bar-striped bg-info "} role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <span>Exercise</span>
-        <div className="progress">
-          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <span>Affection</span>
-        <div className="progress">
-          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <span>Watchfulness</span>
-        <div className="progress">
-          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <span>Heat Sensitivity</span>
-        <div className="progress">
-          <div className="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-        </div> */}
 
 
       </div>
