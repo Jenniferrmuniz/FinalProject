@@ -3,7 +3,7 @@ import axios from 'axios'
 // import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import { Route, Link, Switch } from 'react-router-dom'
 import DogDetails from './comp/DogDetails'
-import NoneSelected from './NoneSelected'
+import NoneSelected from './comp/NoneSelected'
 import baseURL from '../../config'
 
 
