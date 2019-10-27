@@ -138,7 +138,6 @@ class DogDetails extends Component {
     })
   }
 
-  //value={this.props.theUser.email}
 
   contact = () => {
 
@@ -151,14 +150,6 @@ class DogDetails extends Component {
               <label htmlFor="">To</label>
               <input type="email" name="toEmail" id="" value={this.props.dogInfo.contact.email} />
             </div>
-            <div>
-              {/* <label htmlFor="">From</label> */}
-              {/* {this.props.user ? */}
-              {/* <input type='email' name='fromEmail' /> */}
-              {/* :
-                ''
-              } */}
-            </div>
           </div>
 
           <div className='subject-div'>
@@ -169,6 +160,7 @@ class DogDetails extends Component {
             <label htmlFor="">Message</label>
             <textarea type="text" name="message" id="" onChange={this.handleChange} ></textarea>
           </div>
+          <p>Don't forget to put your contact infornation so that they can reach you!</p>
           <div className='btn-div'>
             <button type="submit">Submit</button>
           </div>
