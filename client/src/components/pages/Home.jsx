@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import { Route, Link, NavLink, Switch } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import LoggedInView1 from './home-components/LoggedInView1'
 
 
 export default class Home extends Component {
@@ -14,50 +15,51 @@ export default class Home extends Component {
 
       // If user is logged in has taken the quiz
       if (this.props.info.preferences && this.props.topMatch) {
-        console.log(this.props)
-        homeLink = <div className='preferences-true'>
-          <div className='matches-div'>
 
-            <div className='bestMatch-div'>
-              <p>Your Best Match :</p>
+        homeLink = <LoggedInView1 topMatch={this.props.topMatch}/>
+        // homeLink = <div className='preferences-true'>
+        //   <div className='matches-div'>
 
-              <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
-                {this.props.topMatch.photos[0] ?
-                  <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
+        //     <div className='bestMatch-div'>
+        //       <p>Your Best Match :</p>
 
-                  :
-                  <img className='top-match' src={'defaultPic.png'} alt='best matched dog' />
+        //       <Link className='link-hover-div' to={"/all-dogs/" + this.props.topMatch.id}>
+        //         {this.props.topMatch.photos[0] ?
+        //           <img className='top-match' src={this.props.topMatch.photos[0].large} alt='best matched dog' />
 
-                }
-                <p>{this.props.topMatch.name}</p>
-              </Link>
+        //           :
+        //           <img className='top-match' src={'defaultPic.png'} alt='best matched dog' />
 
-            </div>
+        //         }
+        //         <p>{this.props.topMatch.name}</p>
+        //       </Link>
 
-            <div className='matchesLink'>
-              <Link className='theLink' to="/all-dogs">See all matches</Link>
-            </div>
-            <div className='matchesLink'>
-              <Link className='theLink' to="/quiz">Take Quiz Again</Link>
-            </div>
-          </div>
+        //     </div>
 
-          <div className='home-div'>
-            <div className='something'>
-              <p>Ready to adopt?</p>
-              <Link to='/tips'>Check out these tips!</Link>
-            </div>
-            <div className='something'>
-              <p>Already adopted?</p>
-              <a href='http://pawnderapp.herokuapp.com/'>Schedule a playdate using Pawnder!</a>
-            </div>
-            <div className='something'>
-              <p>Looking for a groomer?</p>
-              <a href='http://spaws-project.herokuapp.com/'>Visit Spaws!</a>
-            </div>
-          </div>
+        //     <div className='matchesLink'>
+        //       <Link className='theLink' to="/all-dogs">See all matches</Link>
+        //     </div>
+        //     <div className='matchesLink'>
+        //       <Link className='theLink' to="/quiz">Take Quiz Again</Link>
+        //     </div>
+        //   </div>
 
-        </div>
+        //   <div className='home-div'>
+        //     <div className='something'>
+        //       <p>Ready to adopt?</p>
+        //       <Link to='/tips'>Check out these tips!</Link>
+        //     </div>
+        //     <div className='something'>
+        //       <p>Already adopted?</p>
+        //       <a href='http://pawnderapp.herokuapp.com/'>Schedule a playdate using Pawnder!</a>
+        //     </div>
+        //     <div className='something'>
+        //       <p>Looking for a groomer?</p>
+        //       <a href='http://spaws-project.herokuapp.com/'>Visit Spaws!</a>
+        //     </div>
+        //   </div>
+
+        // </div>
       }
 
       // User is logged in but has not taken the quiz yet
